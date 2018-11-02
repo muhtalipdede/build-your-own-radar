@@ -20,7 +20,13 @@ const Sheet = require('./sheet');
 const ExceptionMessages = require('./exceptionMessages');
 
 const plotRadar = function (title, blips) {
-    document.title = title;
+    var date = title == 'current.csv' ? new Date() : new Date(title.substring(0, title.length - 4)),
+        locale = "en-us",
+        month = date.toLocaleString(locale, {
+            month: "long"
+        });
+
+    document.title = month + ' ' + date.getFullYear() + ' Tech Radar';
     d3.selectAll(".loading").remove();
 
     var rings = _.map(_.uniqBy(blips, 'ring'), 'ring');
@@ -57,7 +63,7 @@ const GoogleSheet = function (sheetReference, sheetName) {
 
     self.build = function () {
         var sheet = new Sheet(sheetReference);
-        sheet.exists(function(notFound) {
+        sheet.exists(function (notFound) {
             if (notFound) {
                 plotErrorMessage(notFound);
                 return;
@@ -164,37 +170,30 @@ const FileName = function (url) {
 
 const GoogleSheetInput = function () {
     var self = {};
-    
+
     self.build = function () {
-        var domainName = DomainName(window.location.search.substring(1));
-        var queryParams = QueryParams(window.location.search.substring(1));
+        var search = window.location.search.substring(1);
+        var domainName = DomainName(search);
+        var queryParams = QueryParams(search);
 
-        if (domainName && queryParams.sheetId.endsWith('csv')) {
-            var sheet = CSVDocument(queryParams.sheetId);
-            sheet.init().build();
-        }
-        else if (domainName && domainName.endsWith('google.com') && queryParams.sheetId) {
-            var sheet = GoogleSheet(queryParams.sheetId, queryParams.sheetName);
-            console.log(queryParams.sheetName)
-
+        if (queryParams.radar) {
+            var baseUrl = location.protocol + '//' + location.host + location.pathname;
+            var sheet = CSVDocument(baseUrl + '/radars/' + queryParams.radar + '.csv');
             sheet.init().build();
         } else {
-            var content = d3.select('body')
-                .append('div')
-                .attr('class', 'input-sheet');
-            set_document_title();
+            if (domainName && queryParams.sheetId.endsWith('csv')) {
+                var sheet = CSVDocument(queryParams.sheetId);
+                sheet.init().build();
+            } else if (domainName && domainName.endsWith('google.com') && queryParams.sheetId) {
+                var sheet = GoogleSheet(queryParams.sheetId, queryParams.sheetName);
+                console.log(queryParams.sheetName)
 
-            plotLogo(content);
-
-            var bannerText = '<div><h1>Build your own radar</h1><p>Once you\'ve <a href ="https://www.thoughtworks.com/radar/byor">created your Radar</a>, you can use this service' +
-                ' to generate an <br />interactive version of your Technology Radar. Not sure how? <a href ="https://www.thoughtworks.com/radar/how-to-byor">Read this first.</a></p></div>';
-
-            plotBanner(content, bannerText);
-
-            plotForm(content);
-
-            plotFooter(content);
-
+                sheet.init().build();
+            } else {
+                var baseUrl = location.protocol + '//' + location.host + location.pathname;
+                var sheet = CSVDocument(baseUrl + '/radars/current.csv');
+                sheet.init().build();
+            }
         }
     };
 
@@ -224,7 +223,7 @@ function plotLoading(content) {
 function plotLogo(content) {
     content.append('div')
         .attr('class', 'input-sheet__logo')
-        .html('<a href="https://www.thoughtworks.com"><img src="/images/tw-logo.png" / ></a>');
+        .html('<a href="https://www.d-teknoloji.com.tr"><img src="/images/dt-logo.png" / ></a>');
 }
 
 function plotFooter(content) {
@@ -234,20 +233,13 @@ function plotFooter(content) {
         .append('div')
         .attr('class', 'footer-content')
         .append('p')
-        .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. '
-        + 'By using this service you agree to <a href="https://www.thoughtworks.com/radar/tos">ThoughtWorks\' terms of use</a>. '
-        + 'You also agree to our <a href="https://www.thoughtworks.com/privacy-policy">privacy policy</a>, which describes how we will gather, use and protect any personal data contained in your public Google Sheet. '
-        + 'This software is <a href="https://github.com/thoughtworks/build-your-own-radar">open source</a> and available for download and self-hosting.');
-
-
-
+        .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. ');
 }
 
 function plotBanner(content, text) {
     content.append('div')
         .attr('class', 'input-sheet__banner')
         .html(text);
-
 }
 
 function plotForm(content) {
@@ -263,7 +255,7 @@ function plotForm(content) {
         .attr('type', 'text')
         .attr('name', 'sheetId')
         .attr('placeholder', "e.g. https://docs.google.com/spreadsheets/d/<\sheetid\> or hosted CSV file")
-        .attr('required','');
+        .attr('required', '');
 
     form.append('button')
         .attr('type', 'submit')

@@ -20,6 +20,8 @@ if (isDev) {
     devtool = 'source-map';
 }
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 let plugins = [
     new ExtractTextPlugin('[name].[hash].css'),
     new HtmlWebpackPlugin({
@@ -32,7 +34,10 @@ let plugins = [
         chunks: ['common'],
         inject: 'body',
         filename: 'error.html'
-    })
+    }),
+    new CopyWebpackPlugin([
+        { from: './src/radars', to: 'radars' }
+    ])
 ];
 
 if (isProd) {
