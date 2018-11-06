@@ -16,7 +16,8 @@ body {
 
 @media print {
 
-  body, article {
+  body,
+  article {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -27,7 +28,7 @@ body {
   }
 
   a:after {
-    content: " <" attr(href) "> ";
+    content: " <"attr(href) "> ";
     font-size: 0.8em;
     font-weight: normal;
   }
@@ -47,12 +48,15 @@ body {
     &.first .quadrant-table__name {
       color: $green;
     }
+
     &.second .quadrant-table__name {
       color: $blue;
     }
+
     &.third .quadrant-table__name {
       color: $orange;
     }
+
     &.fourth .quadrant-table__name {
       color: $violet;
     }
@@ -82,7 +86,7 @@ body {
 
     }
 
-    h2 + h3 {
+    h2+h3 {
       page-break-before: avoid;
     }
   }
@@ -102,7 +106,7 @@ body {
       font-size: 40px;
       width: 100%;
       padding: 10px;
-      display:block;
+      display: block;
     }
 
     .radar-title .radar-title__logo {
@@ -112,10 +116,12 @@ body {
       a {
         padding: 40px 10px 0;
         display: block;
+
         &::after {
           display: none;
         }
       }
+
       img {
         max-width: 150px;
       }
@@ -128,7 +134,7 @@ body {
     .home-link {
       display: none;
 
-      &.selected{
+      &.selected {
         display: none;
       }
     }
@@ -150,6 +156,15 @@ body {
 
 
 @media screen {
+
+  h1 {
+    text-transform: none !important;
+  }
+
+  #footer .footer-content p {
+    text-align: center;
+    font-size: 11px;
+  }
 
   #radar {
     width: 80%;
@@ -174,14 +189,17 @@ body {
           stroke: none;
           fill: $grey-light;
         }
+
         &.ring-arc-2 {
           stroke: none;
           fill: $grey;
         }
+
         &.ring-arc-1 {
           stroke: none;
           fill: $grey-dark;
         }
+
         &.ring-arc-0 {
           stroke: none;
           fill: $grey-darkest;
@@ -197,19 +215,24 @@ body {
         cursor: pointer;
       }
 
-      circle, polygon, path {
+      circle,
+      polygon,
+      path {
         &.first {
           fill: $green;
           stroke: none;
         }
+
         &.second {
           fill: $blue;
           stroke: none;
         }
+
         &.third {
           fill: $orange;
           stroke: none;
         }
+
         &.fourth {
           fill: $violet;
           stroke: none;
@@ -331,6 +354,7 @@ body {
             }
 
             transition: max-height 0.2s ease;
+
             &.expanded {
               transition: max-height 0.5s ease 0.2s;
               max-height: 1000px;

@@ -21,12 +21,12 @@ const ExceptionMessages = require('./exceptionMessages');
 
 const plotRadar = function (title, blips) {
     var date = title == 'current.csv' ? new Date() : new Date(title.substring(0, title.length - 4)),
-        locale = "en-us",
+        locale = "tr-TR",
         month = date.toLocaleString(locale, {
             month: "long"
         });
 
-    document.title = month + ' ' + date.getFullYear() + ' Tech Radar';
+    document.title = month + ' ' + date.getFullYear() + ' Teknoloji Radarı';
     d3.selectAll(".loading").remove();
 
     var rings = _.map(_.uniqBy(blips, 'ring'), 'ring');
@@ -167,7 +167,6 @@ const FileName = function (url) {
     return url;
 }
 
-
 const GoogleSheetInput = function () {
     var self = {};
 
@@ -201,7 +200,7 @@ const GoogleSheetInput = function () {
 };
 
 function set_document_title() {
-    document.title = "Build your own Radar";
+    document.title = "Doğuş Teknoloji Radarı";
 }
 
 function plotLoading(content) {
@@ -214,10 +213,6 @@ function plotLoading(content) {
     set_document_title();
 
     plotLogo(content);
-
-    var bannerText = '<h1>Building your radar...</h1><p>Your Technology Radar will be available in just a few seconds</p>';
-    plotBanner(content, bannerText);
-    plotFooter(content);
 }
 
 function plotLogo(content) {
@@ -242,33 +237,9 @@ function plotBanner(content, text) {
         .html(text);
 }
 
-function plotForm(content) {
-    content.append('div')
-        .attr('class', 'input-sheet__form')
-        .append('p')
-        .html('<strong>Enter the URL of your <a href="https://www.thoughtworks.com/radar/how-to-byor" target="_blank">published</a> Google Sheet or CSV file below…</strong>');
-
-    var form = content.select('.input-sheet__form').append('form')
-        .attr('method', 'get');
-
-    form.append('input')
-        .attr('type', 'text')
-        .attr('name', 'sheetId')
-        .attr('placeholder', "e.g. https://docs.google.com/spreadsheets/d/<\sheetid\> or hosted CSV file")
-        .attr('required', '');
-
-    form.append('button')
-        .attr('type', 'submit')
-        .append('a')
-        .attr('class', 'button')
-        .text('Build my radar');
-
-    form.append('p').html("<a href='https://www.thoughtworks.com/radar/how-to-byor'>Need help?</a>");
-}
-
 function plotErrorMessage(exception) {
     d3.selectAll(".loading").remove();
-    var message = 'Oops! It seems like there are some problems with loading your data. ';
+    var message = 'Hata oluştu! ';
 
     if (exception instanceof MalformedDataError) {
         message = message.concat(exception.message);
@@ -277,8 +248,6 @@ function plotErrorMessage(exception) {
     } else {
         console.error(exception);
     }
-
-    message = message.concat('<br/>', 'Please check <a href="https://www.thoughtworks.com/radar/how-to-byor">FAQs</a> for possible solutions.');
 
     d3.select('body')
         .append('div')

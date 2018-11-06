@@ -413,7 +413,7 @@ const Radar = function (size, radar) {
     header.select('.radar-title')
       .append('div')
       .attr('class', 'radar-title__logo')
-      .html('<a href="https://www.thoughtworks.com"> <img src="/images/logo.png" /> </a>');
+      .html('<a href="https://www.d-teknoloji.com.tr"> <img src="/images/logo.png" /> </a>');
 
     return header;
   }
@@ -441,7 +441,7 @@ const Radar = function (size, radar) {
 
     header.append('div')
       .classed('print-radar button no-capitalize', true)
-      .text('Print this radar')
+      .text('Yazdır')
       .on('click', window.print.bind(window));
   }
 
