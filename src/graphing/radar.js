@@ -299,7 +299,7 @@ const Radar = function (size, radar) {
   function createHomeLink(pageElement) {
     if (pageElement.select('.home-link').empty()) {
       pageElement.append('div')
-        .html('&#171; Back to Radar home')
+        .html('&#171; Geri')
         .classed('home-link', true)
         .classed('selected', true)
         .on('click', redrawFullRadar)
@@ -317,8 +317,8 @@ const Radar = function (size, radar) {
   function drawLegend(order) {
     removeRadarLegend();
 
-    var triangleKey = "New or moved";
-    var circleKey = "No change";
+    var triangleKey = "Yeni veya taşınmış";
+    var circleKey = "Değişiklik yok";
 
     var container = d3.select('svg').append('g')
       .attr('class', 'legend legend'+"-"+order);
