@@ -8,10 +8,10 @@
     "dev": "webpack-dev-server --dev --inline",
     "build": "webpack --prod"
   },
-  "author": "ThoughtWorks",
+  "author": "Doğuş Teknoloji",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thoughtworks/build-your-own-radar"
+    "url": "https://github.com/DogusTeknoloji/build-your-own-radar"
   },
   "keywords": [
     "tech-radar"
