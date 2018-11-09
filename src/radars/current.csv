@@ -1,12 +1,12 @@
 name,ring,quadrant,isNew,description
 Mimari Tasarım Kayıtları (LADR),Benimse,Teknikler,FALSE, Sevi
 Service Design Canvas,Benimse,Teknikler,TRUE, Umut
-Event Storming,Benimse,Teknikler,FALSE, Önsel
+Event Storming,Benimse,Teknikler,FALSE,Event Storming, bir domain içinde gerçekleşen süreçlerin tanımlanması için uygulanan workshop tarzında bir aktivitedir. İş uzmanları, geliştiriciler ve analistlerin de bulunabileceği, bilgisayar gerektirmeyen ve iş süreçlerinin kolayca anlaşılabilmesini sağlayan bir modelleme yöntemi olan Event Storming'in tüm projelerde kullanılmasını tavsiye ediyoruz.
 Unit Test Geliştirme,Benimse,Teknikler,FALSE, Ali
 Pair Programming,Benimse,Teknikler,FALSE, Ali
 Code Review,Benimse,Teknikler,FALSE, Ali
 İstemci Taraflı Sorgu,Deneyimle,Teknikler,FALSE, Umut
-Domain Driven Design,Deneyimle,Teknikler,FALSE, Önsel
+Domain Driven Design,Deneyimle,Teknikler,FALSE,Sürekli gelişen, evrimleşen uygulama modelinin birbirleriyle ilişkili parçalara ayrılmasını kolaylaştırmayı hedefleyen bir domain modelleme yöntemidir. Mikroservis mimarilerinde, servis sınırlarının <i>Bounded Context</i> kavramı ile belirlenebilmesi açısından kullanılması tavsiye edilmektedir.
 Hobi Projesi Geliştirme,Deneyimle,Teknikler,FALSE, Kemal
 Microservices,Deneyimle,Teknikler,FALSE, Umut
 Micro ORM,Deneyimle,Teknikler,FALSE, Kemal
@@ -19,26 +19,26 @@ Behavior Driven Development,Değerlendir,Teknikler,TRUE, Ali
 Progressive Web Applications,Değerlendir,Teknikler,TRUE, Umut
 Stored Procedure gibi veritabanı bileşenlerinde iş kuralları geliştirmek,Kaçın,Teknikler,FALSE, Kemal
 Fazla soyutlamayı basitliğe tercih etmek,Kaçın,Teknikler,FALSE, Umut
-Platform soyutlamalarını tekrar soyutlamak,Kaçın,Teknikler,FALSE, Önsel
+Platform soyutlamalarını tekrar soyutlamak,Kaçın,Teknikler,FALSE,Geliştirme platformları içindeki soyutlanmış yapıların üzerine uygulama katmanı seviyesinde tekrar soyutlama yapıları eklemek olarak tanımlanan bu yöntemden kesinlikle kaçınmalısınız. Bu duruma örnek olarak .Net Core içinde gelen IConfiguration, ILogger gibi arayüzlerin üzerine, uygulamaya özel yeni soyutlama arayüzleri eklemek verilebilir. Yeni bir soyutlama katmanı geliştirmek yerine, platform üzerinde hazır gelen soyutlamaların neden yapıldığını, bunların nasıl kullanılabileceğini anlamak ilk amaç olmalıdır. 
 .Net Core,Benimse,Platformlar,FALSE, Kemal
-Single Page Application,Benimse,Platformlar,FALSE, Önsel
+Single Page Application,Benimse,Platformlar,FALSE,Browser içinde, tekrar sayfa yüklemeden çalışan uygulamalara Single Page Application ismi verilmektedir. Hızlı çalışmaları, offline çalışmaya uygun olmaları, kullanıcıya masaüstü bir uygulama ile çalışmaya benzer bir deneyim sunmaları açısından geleneksel sunucu uygulamaları yerine tercih edilmelidirler.
 Client Side - MVVM,Benimse,Platformlar,FALSE, Umut
 Azure DevOps (VSTS),Benimse,Platformlar,FALSE, Sevi
 Docker,Benimse,Platformlar,FALSE, Sevi
 PostgreSQL,Benimse,Platformlar,TRUE, Kemal
 Merkezi Loglama İçin Graylog/Elastic/Kibana,Benimse,Platformlar,TRUE, Umut
-Redis,Benimse,Platformlar,FALSE, Önsel
-mongoDB,Benimse,Platformlar,FALSE, Önsel
+Redis,Benimse,Platformlar,FALSE,Redis, veritabanı, cache ve message broker olarak da kullanılabilen açık kaynak kodlu bir in-memory veri deposudur. Cache kullanımı gerektiren uygulamalarda tercih edilmelidir.
+mongoDB,Benimse,Platformlar,FALSE,MongoDB, bir şemasız (NoSQL/Document) veritabanı sistemidir. Yoğun ilişkisel veri saklanma ihtiyacı olmayan, ya da dinamik ve değişken veri saklama ihtiyacı olan projelerde tercih edilmelidir.
 MySQL,Deneyimle,Platformlar,TRUE, Kemal
 Github,Deneyimle,Platformlar,FALSE, Umut
-Elastic,Deneyimle,Platformlar,FALSE, Önsel
+Elastic,Deneyimle,Platformlar,FALSE,Elastic, açık kaynak kodlu, dağıtık, ölçeklenebilir ve çok yüksek performanslı bir arama motorudur. Text ağırlıklı aramalarda tercih edilmelidir.
 Azure,Deneyimle,Platformlar,FALSE, Sevi
 Kubernetes,Deneyimle,Platformlar,FALSE, Sevi
 Testinium,Deneyimle,Platformlar,TRUE, Ali
-Node.js,Deneyimle,Platformlar,FALSE, Önsel
+Node.js,Deneyimle,Platformlar,FALSE,Node.js, Chrome V8 JavaScript motoru üzerine inşa edilmiş bir sunucu taraflı uygulama geliştirme platformudur. Node.js, aynı zamanda frontend uygulama geliştirme aşamasında tercih edilen paket yönetim araçlarını da sunmaktadır. Hem sunucu, hem de istemci uygulamalar geliştirirken tercih edilebilecek bir alternatif olarak düşünülebilir.
 AWS,Değerlendir,Platformlar,TRUE, Sevi
 Google Cloud,Değerlendir,Platformlar,TRUE, Sevi
-Azure Functions,Değerlendir,Platformlar,TRUE, Önsel
+Azure Functions,Değerlendir,Platformlar,TRUE,Sunucusuz uygulama geliştirme yöntemleri son zamanlarda popülerlik kazanmıştır. Microsoft'un bu yöntem için sunduğu Azure Functions platformu, konfigüre edilebilen olaylarla tetiklenen ve isteğe göre birbirlerinden bağımsız olarak ölçeklendirilebilen fonksiyonların geliştirilebilmesine olanak vermektedir. Daha etkin maliyetlendirme özelliklerinden de ötürü, geleneksel WebAPI uygulamalarına alternatif olarak düşünülebilir.
 CockroachDB,Değerlendir,Platformlar,TRUE, Umut
 WebAssembly,Değerlendir,Platformlar,TRUE, Kemal
 Blazor,Değerlendir,Platformlar,TRUE, Kemal
@@ -49,7 +49,7 @@ Visual Studio Code,Benimse,Araçlar,FALSE, Umut
 Git,Benimse,Araçlar,FALSE, Ali
 Postman,Benimse,Araçlar,FALSE, Ali
 Kong,Benimse,Araçlar,FALSE, Sevi
-Kibana,Benimse,Araçlar,FALSE, Önsel
+Kibana,Benimse,Araçlar,FALSE,ElasticSearch üzerinde depolanan verinin özel sorgularla incelenebilmesini, dashboard konsepti ile sunulmasını sağlayan aracın kullanılması tavsiye edilmektedir.
 OpenCover,Benimse,Araçlar,FALSE, Ali
 AxoCover,Benimse,Araçlar,TRUE, Ali
 RabbitMQ,Deneyimle,Araçlar,FALSE, Umut
@@ -57,11 +57,11 @@ Yarn,Deneyimle,Araçlar,TRUE, Umut
 Coverlet,Deneyimle,Araçlar,TRUE, Ali
 PowerBI,Deneyimle,Araçlar,TRUE, Sevi
 Sketch ile Prototipleştirme,Değerlendir,Araçlar,TRUE, Umut
-Apache Kafka,Değerlendir,Araçlar,TRUE, Önsel
-Prometheus,Değerlendir,Araçlar,TRUE, Serdar
+Apache Kafka,Değerlendir,Araçlar,TRUE, Gerçek zamanlı veri akışı işleme aracı ve CQRS/Event Sourcing uygulamalarında "Single source of truth" kavramı çerçevesinde tüm olaylar için bir veri deposu olarak kullanılması tavsiye edilmektedir.
+Prometheus,Değerlendir,Araçlar,TRUE, "<a href='https://prometheus.io/'>Prometheus</a> açık kaynak bir izleme (monitoring) ve uyarma (alerting) aracıdır. <a href='https://www.cncf.io/'>Cloud Native Computing Foundation (CNCF)</a> tarafından 'mezun' (graduate) statüsüne alınmış ikinci projedir."
 C# 7,Benimse,Diller & Kütüphaneler,FALSE, Umut
 TypeScript,Benimse,Diller & Kütüphaneler,FALSE, Umut
-Vue.js,Benimse,Diller & Kütüphaneler,FALSE, Önsel
+Vue.js,Benimse,Diller & Kütüphaneler,FALSE,Single Page Application geliştirme kütüphaneleri içinde adaptasyon ve geliştirme kolaylığı avantajlarından ötürü kullanılması tercih edilmelidir.
 Java,Benimse,Diller & Kütüphaneler,FALSE, Sevi
 Entity Framework Core,Benimse,Diller & Kütüphaneler,FALSE, Umut
 IdentityServer,Benimse,Diller & Kütüphaneler,FALSE, Kemal
@@ -69,13 +69,13 @@ xUnit,Benimse,Diller & Kütüphaneler,FALSE, Ali
 Selenium,Benimse,Diller & Kütüphaneler,FALSE, Ali
 BatMap,Benimse,Diller & Kütüphaneler,FALSE, Umut
 GoLang,Deneyimle,Diller & Kütüphaneler,TRUE, Sevi
-React.js,Deneyimle,Diller & Kütüphaneler,TRUE, Önsel
-Pug.js,Deneyimle,Diller & Kütüphaneler,FALSE, Önsel
-Webpack,Deneyimle,Diller & Kütüphaneler,FALSE, Önsel
+React.js,Deneyimle,Diller & Kütüphaneler,TRUE,Single Page Application geliştirme kütüphaneleri içinde adaptasyon ve geliştirme kolaylığı avantajlarından ötürü kullanılması düşünülebilir.
+Pug.js,Deneyimle,Diller & Kütüphaneler,FALSE,HTML markup yerine daha sade olması ve içinde gelen güçlü mixin geliştirme gibi özelliklerinden ötürü kullanımı düşünülebilir.
+Webpack,Deneyimle,Diller & Kütüphaneler,FALSE,Frontend uygulamaları geliştirme sürecinde, özellikle SPA uygulamaların bileşenlerinin konfigüre edilmesi ve paketlenmesi için kullanımı düşünülebilir.
 Linquest,Deneyimle,Diller & Kütüphaneler,TRUE, Umut
 Spring Cloud,Deneyimle,Diller & Kütüphaneler,FALSE, Sevi
 Dapper,Deneyimle,Diller & Kütüphaneler,FALSE, Kemal
-SCSS,Değerlendir,Diller & Kütüphaneler,TRUE, Önsel
+SCSS,Değerlendir,Diller & Kütüphaneler,TRUE,SCSS, CSS içinde birçok programlama yapısının kullanılabilmesine olanak veren bir CSS ön-işlemcisidir. CSS içinde değişkenler tanımlanmasına, matematiksel operasyonlar gerçekleştirilmesine, döngüler tanımlanabilmesine imkan verir. Bu nedenle CSS yerine kullanılması değerlendirilebilir.
 Angular,Değerlendir,Diller & Kütüphaneler,FALSE, Kemal
 Angular.js,Kaçın,Diller & Kütüphaneler,FALSE, Kemal
 Ember.js,Kaçın,Diller & Kütüphaneler,FALSE, Kemal
