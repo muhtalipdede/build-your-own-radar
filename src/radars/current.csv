@@ -2,7 +2,7 @@ name,ring,quadrant,isNew,description
 Mimari Tasarım Kayıtları (LADR),Benimse,Teknikler,FALSE, Sevi
 Service Design Canvas,Benimse,Teknikler,TRUE, Umut
 Event Storming,Benimse,Teknikler,FALSE,Event Storming, bir domain içinde gerçekleşen süreçlerin tanımlanması için uygulanan workshop tarzında bir aktivitedir. İş uzmanları, geliştiriciler ve analistlerin de bulunabileceği, bilgisayar gerektirmeyen ve iş süreçlerinin kolayca anlaşılabilmesini sağlayan bir modelleme yöntemi olan Event Storming'in tüm projelerde kullanılmasını tavsiye ediyoruz.
-Unit Test Geliştirme,Benimse,Teknikler,FALSE, Ali
+Unit Test Geliştirme,Benimse,Teknikler,FALSE,Unit Testler metotları ve yazılım bileşenlerini soyutlanmış olarak test etmede kullanılır. Bunlar en alt seviyedeki testlerdir. Yazılımcı için önemi 'Kodlarınız Unit Test yazmayacak kadar değersiz mi?' vurgusuyla dile getirilir.    
 Pair Programming,Benimse,Teknikler,FALSE, Ali
 Code Review,Benimse,Teknikler,FALSE, Ali
 İstemci Taraflı Sorgu,Deneyimle,Teknikler,FALSE, Umut
