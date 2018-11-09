@@ -3,8 +3,8 @@ Mimari Tasarım Kayıtları (LADR);Benimse;Teknikler;FALSE; Sevi
 Service Design Canvas;Benimse;Teknikler;TRUE; Umut
 Event Storming;Benimse;Teknikler;FALSE;Event Storming; bir domain içinde gerçekleşen süreçlerin tanımlanması için uygulanan workshop tarzında bir aktivitedir. İş uzmanları, geliştiriciler ve analistlerin de bulunabileceği, bilgisayar gerektirmeyen ve iş süreçlerinin kolayca anlaşılabilmesini sağlayan bir modelleme yöntemi olan Event Storming'in tüm projelerde kullanılmasını tavsiye ediyoruz.
 Unit Test Geliştirme;Benimse;Teknikler;FALSE;Unit Testler metotları ve yazılım bileşenlerini soyutlanmış olarak test etmede kullanılır. Bunlar en alt seviyedeki testlerdir. Yazılımcı için önemi 'Kodlarınız Unit Test yazmayacak kadar değersiz mi?' vurgusuyla dile getirilir.    
-Pair Programming;Benimse;Teknikler;FALSE; Ali
-Code Review;Benimse;Teknikler;FALSE; Ali
+Pair Programming;Benimse;Teknikler;FALSE;Pair Programming kodların iki yazılımcının aktif katkısıyla yazılmasıdır. Bu yöntemle iki yazılımcı interaktif olarak kod tasarımı, organizasyonu, incelemesi ve değişikliği yapabilir.
+Code Review;Benimse;Teknikler;FALSE;Code Review bir kişi tarafından yazılan kodların diğerleri tarafından pasif olarak değerlendirilmesidir. Kodlarda gözle görülebilecek hataları bulmakta ve yetkinliğin ekip geneline yayılmasında faydalı olmaktadır.
 İstemci Taraflı Sorgu;Deneyimle;Teknikler;FALSE; Umut
 Domain Driven Design;Deneyimle;Teknikler;FALSE;Sürekli gelişen, evrimleşen uygulama modelinin birbirleriyle ilişkili parçalara ayrılmasını kolaylaştırmayı hedefleyen bir domain modelleme yöntemidir. Mikroservis mimarilerinde, servis sınırlarının <i>Bounded Context</i> kavramı ile belirlenebilmesi açısından kullanılması tavsiye edilmektedir.
 Hobi Projesi Geliştirme;Deneyimle;Teknikler;FALSE; Kemal
