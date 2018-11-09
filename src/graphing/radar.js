@@ -130,7 +130,15 @@ const Radar = function (size, radar) {
 
   function addRing(ring, order) {
     var table = d3.select('.quadrant-table.' + order);
-    table.append('h3').text(ring);
+    // table.append('h3').text(ring);
+
+    let h3 = table.append('h3');
+    h3.append('span')
+      .attr('style', 'color:#1ebccd; padding-right: 4px;')
+      .text('●');
+    h3.append('span').text(ring);
+
+    // <span class="dot techniques">●</span>
     return table.append('ul');
   }
 
@@ -138,10 +146,16 @@ const Radar = function (size, radar) {
     var adjustX = Math.sin(toRadian(startAngle)) - Math.cos(toRadian(startAngle));
     var adjustY = -Math.cos(toRadian(startAngle)) - Math.sin(toRadian(startAngle));
 
-    var radius = chance.floating({min: minRadius + blip.width / 2, max: maxRadius - blip.width / 2});
+    var radius = chance.floating({
+      min: minRadius + blip.width / 2,
+      max: maxRadius - blip.width / 2
+    });
     var angleDelta = Math.asin(blip.width / 2 / radius) * 180 / Math.PI;
     angleDelta = angleDelta > 45 ? 45 : angleDelta;
-    var angle = toRadian(chance.integer({min: angleDelta, max: 90 - angleDelta}));
+    var angle = toRadian(chance.integer({
+      min: angleDelta,
+      max: 90 - angleDelta
+    }));
 
     var x = center() + radius * Math.cos(angle) * adjustX;
     var y = center() + radius * Math.sin(angle) * adjustY;
@@ -292,7 +306,7 @@ const Radar = function (size, radar) {
     blipListItem.on('click', clickBlip);
   }
 
-  function removeHomeLink(){
+  function removeHomeLink() {
     d3.select('.home-link').remove();
   }
 
@@ -310,7 +324,7 @@ const Radar = function (size, radar) {
     }
   }
 
-  function removeRadarLegend(){
+  function removeRadarLegend() {
     d3.select('.legend').remove();
   }
 
@@ -321,34 +335,34 @@ const Radar = function (size, radar) {
     var circleKey = "Değişiklik yok";
 
     var container = d3.select('svg').append('g')
-      .attr('class', 'legend legend'+"-"+order);
+      .attr('class', 'legend legend' + "-" + order);
 
     var x = 10;
     var y = 10;
 
 
-    if(order == "first") {
+    if (order == "first") {
       x = 4 * size / 5;
       y = 1 * size / 5;
     }
 
-    if(order == "second") {
+    if (order == "second") {
       x = 1 * size / 5 - 15;
       y = 1 * size / 5 - 20;
     }
 
-    if(order == "third") {
+    if (order == "third") {
       x = 1 * size / 5 - 15;
       y = 4 * size / 5 + 15;
     }
 
-    if(order == "fourth") {
+    if (order == "fourth") {
       x = 4 * size / 5;
       y = 4 * size / 5;
     }
 
     d3.select('.legend')
-      .attr('class', 'legend legend-'+order)
+      .attr('class', 'legend legend-' + order)
       .transition()
       .style('visibility', 'visible');
 
@@ -452,7 +466,7 @@ const Radar = function (size, radar) {
       .append('div')
       .attr('class', 'footer-content')
       .append('p')
-      .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>');
+      .html('<a href="https://github.com/DogusTeknoloji/build-your-own-radar">Project</a> Forked From <a href="https://github.com/thoughtworks/build-your-own-radar">ThoughtWorks build-your-own-radar</a>');
   }
 
   function mouseoverQuadrant(order) {
@@ -516,7 +530,7 @@ const Radar = function (size, radar) {
 
 
 
-    if (d3.select('.legend.legend-' + order).empty()){
+    if (d3.select('.legend.legend-' + order).empty()) {
       drawLegend(order);
     }
   }
