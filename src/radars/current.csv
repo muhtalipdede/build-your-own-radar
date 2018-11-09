@@ -58,7 +58,7 @@ Coverlet,Deneyimle,Araçlar,TRUE, Ali
 PowerBI,Deneyimle,Araçlar,TRUE, Sevi
 Sketch ile Prototipleştirme,Değerlendir,Araçlar,TRUE, Umut
 Apache Kafka,Değerlendir,Araçlar,TRUE, Önsel
-Prometheus,Değerlendir,Araçlar,TRUE, Serdar
+Prometheus,Değerlendir,Araçlar,TRUE, "<a href='https://prometheus.io/'>Prometheus</a> açık kaynak bir izleme (monitoring) ve uyarma (alerting) aracıdır. <a href='https://www.cncf.io/'>Cloud Native Computing Foundation (CNCF)</a> tarafından 'mezun' (graduate) statüsüne alınmış ikinci projedir."
 C# 7,Benimse,Diller & Kütüphaneler,FALSE, Umut
 TypeScript,Benimse,Diller & Kütüphaneler,FALSE, Umut
 Vue.js,Benimse,Diller & Kütüphaneler,FALSE, Önsel
