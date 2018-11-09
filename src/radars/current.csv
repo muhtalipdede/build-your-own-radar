@@ -34,7 +34,7 @@ Github;Deneyimle;Platformlar;FALSE; Umut
 Elastic;Deneyimle;Platformlar;FALSE;Elastic, açık kaynak kodlu, dağıtık, ölçeklenebilir ve çok yüksek performanslı bir arama motorudur. Text ağırlıklı aramalarda tercih edilmelidir.
 Azure;Deneyimle;Platformlar;FALSE; Sevi
 Kubernetes;Deneyimle;Platformlar;FALSE; Sevi
-Testinium;Deneyimle;Platformlar;TRUE; Ali
+Testinium;Deneyimle;Platformlar;TRUE;Testinium, BDD yaklaşımı ile test yazmak, test senaryolarını çalıştırıp raporlamak gibi amaçlarla kullanılan ve bulutta çalışabien bir uygulamadır. Saha BT firması tarafından geliştirilen lisanslı bir üründür. 
 Node.js;Deneyimle;Platformlar;FALSE;Node.js, Chrome V8 JavaScript motoru üzerine inşa edilmiş bir sunucu taraflı uygulama geliştirme platformudur. Node.js, aynı zamanda frontend uygulama geliştirme aşamasında tercih edilen paket yönetim araçlarını da sunmaktadır. Hem sunucu, hem de istemci uygulamalar geliştirirken tercih edilebilecek bir alternatif olarak düşünülebilir.
 AWS;Değerlendir;Platformlar;TRUE; Sevi
 Google Cloud;Değerlendir;Platformlar;TRUE; Sevi
@@ -42,7 +42,7 @@ Azure Functions;Değerlendir;Platformlar;TRUE;Sunucusuz uygulama geliştirme yö
 CockroachDB;Değerlendir;Platformlar;TRUE; Umut
 WebAssembly;Değerlendir;Platformlar;TRUE; Kemal
 Blazor;Değerlendir;Platformlar;TRUE; Kemal
-Selenoid;Değerlendir;Platformlar;TRUE; Ali
+Selenoid;Değerlendir;Platformlar;TRUE;Selenoid, Selenium ile yazılan UI test otomasyonlarını Docker ile Containerized bir şekilde ve bulutta dağıtımlı olarak çalıştırılmasını sağlayan açık kaynak bir üründür. Selenoid çalışan testleri izleme ve video kayıt yapma desteği de vermektedir.
 MS SQL Server;Kaçın;Platformlar;FALSE; Kemal
 Web Forms;Kaçın;Platformlar;FALSE; Kemal
 Visual Studio Code;Benimse;Araçlar;FALSE; Umut
