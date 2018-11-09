@@ -47,7 +47,7 @@ MS SQL Server;Kaçın;Platformlar;FALSE; Kemal
 Web Forms;Kaçın;Platformlar;FALSE; Kemal
 Visual Studio Code;Benimse;Araçlar;FALSE; Umut
 Git;Benimse;Araçlar;FALSE;Git, ilk olarak Linus Torvalds tarafından geliştirilen kaynak kod yönetim sistemidir. Açık kaynak bir üründür. Hafif, hızlı ve dağıtık yapıda çalıştığı için tercih edilir.
-Postman;Benimse;Araçlar;FALSE; Ali
+Postman;Benimse;Araçlar;FALSE;Postman bir Google Chrome uygulamasıdır. Bir GUI aracılığıyla HTTP API servislerle interaktif iletişim kurma ve özelleştirilmiş Request/Response oluşturma desteği verir. Postman, Test Script oluşturma desteği sayesinde Test Otomasyonları için çok tercih edilen bir ürün haline gelmiştir.
 Kong;Benimse;Araçlar;FALSE; Sevi
 Kibana;Benimse;Araçlar;FALSE;ElasticSearch üzerinde depolanan verinin özel sorgularla incelenebilmesini, dashboard konsepti ile sunulmasını sağlayan aracın kullanılması tavsiye edilmektedir.
 OpenCover;Benimse;Araçlar;FALSE; Ali
