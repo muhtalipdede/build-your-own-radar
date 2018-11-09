@@ -1,14 +1,14 @@
 name;ring;quadrant;isNew;description
 Mimari Tasarım Kayıtları (LADR);Benimse;Teknikler;FALSE; Sevi
-Service Design Canvas;Benimse;Teknikler;TRUE; Umut
-Event Storming;Benimse;Teknikler;FALSE;Event Storming; bir domain içinde gerçekleşen süreçlerin tanımlanması için uygulanan workshop tarzında bir aktivitedir. İş uzmanları, geliştiriciler ve analistlerin de bulunabileceği, bilgisayar gerektirmeyen ve iş süreçlerinin kolayca anlaşılabilmesini sağlayan bir modelleme yöntemi olan Event Storming'in tüm projelerde kullanılmasını tavsiye ediyoruz.
+Service Design Canvas;Benimse;Teknikler;TRUE; Service Design Canvas, Domain uzmanlarının da katılımları ile yapılan Event Storming çıktılarını anlamlı ve düzenli bir şekilde saklamak için kullanılır.
+Event Storming;Benimse;Teknikler;FALSE;Event Storming, bir domain içinde gerçekleşen süreçlerin tanımlanması için uygulanan workshop tarzında bir aktivitedir. İş uzmanları, geliştiriciler ve analistlerin de bulunabileceği, bilgisayar gerektirmeyen ve iş süreçlerinin kolayca anlaşılabilmesini sağlayan bir modelleme yöntemi olan Event Storming'in tüm projelerde kullanılmasını tavsiye ediyoruz.
 Unit Test Geliştirme;Benimse;Teknikler;FALSE;Unit Testler metotları ve yazılım bileşenlerini soyutlanmış olarak test etmede kullanılır. Bunlar en alt seviyedeki testlerdir. Yazılımcı için önemi 'Kodlarınız Unit Test yazmayacak kadar değersiz mi?' vurgusuyla dile getirilir.    
 Pair Programming;Benimse;Teknikler;FALSE;Pair Programming kodların iki yazılımcının aktif katkısıyla yazılmasıdır. Bu yöntemle iki yazılımcı interaktif olarak kod tasarımı, organizasyonu, incelemesi ve değişikliği yapabilir.
 Code Review;Benimse;Teknikler;FALSE;Code Review bir kişi tarafından yazılan kodların diğerleri tarafından pasif olarak değerlendirilmesidir. Kodlarda gözle görülebilecek hataları bulmakta ve yetkinliğin ekip geneline yayılmasında faydalı olmaktadır.
-İstemci Taraflı Sorgu;Deneyimle;Teknikler;FALSE; Umut
+İstemci Taraflı Sorgu;Deneyimle;Teknikler;FALSE; Sunucu tarafında geliştirilen servisleri tüketen istemcilerin artmasıyla çok farklı isteklere yanıt verebilmek çok fazla geliştirme yapma ve ayrı metodlar oluşturma ihtiyacı doğurdu. Yeni benimsenen yaklaşımlar ile istemciler daha kapsamlı bir sunucu metodunu ihtiyaçlarına göre özelleştirerek kullanma eğilimdeler. Bu kütüphanelere eskilerden OData ya da yeni yaygınlaşan GraphQL örneklerini verebiiriz.
 Domain Driven Design;Deneyimle;Teknikler;FALSE;Sürekli gelişen, evrimleşen uygulama modelinin birbirleriyle ilişkili parçalara ayrılmasını kolaylaştırmayı hedefleyen bir domain modelleme yöntemidir. Mikroservis mimarilerinde, servis sınırlarının <i>Bounded Context</i> kavramı ile belirlenebilmesi açısından kullanılması tavsiye edilmektedir.
 Hobi Projesi Geliştirme;Deneyimle;Teknikler;FALSE; Kemal
-Microservices;Deneyimle;Teknikler;FALSE; Umut
+Microservices;Deneyimle;Teknikler;FALSE; Sürekli karmaşıklaşan iş gereksinimleri, dikey ölçeklenebilirlikteki donanım sınırları, tek bir teknoloji seçiminin tüm sorun kümesi için çözüm oluşturmada kullanılamaması yazılım dünyasını MicroService yaklaşımına yöneltti. Dağıtık çalışabilen yeni sistemlerin yardımıyla MicroServisler ile büyük projeler çok küçük servislere bölünebilir ve sorun için en uygun teknolojik tercihler ile farklı ekipler ile geliştirilebilir hale geldi.
 Micro ORM;Deneyimle;Teknikler;FALSE; Kemal
 Test Driven Development;Deneyimle;Teknikler;TRUE;TDD (Test Driven Development) yapılması gereken testleri baştan düşünerek yazılım geliştirmek anlamına gelir. Bu yaklaşımı uygulayan bir yazılımcı kodlarını unit testleriyle beraber geliştirir.
 Distributed SAGA Pattern;Değerlendir;Teknikler;TRUE; Sevi
@@ -16,9 +16,9 @@ Eventual Consistency;Değerlendir;Teknikler;TRUE; Sevi
 CQRS;Değerlendir;Teknikler;TRUE; Sevi
 Teknik Paylaşımlar (Brown Bag Sessions);Değerlendir;Teknikler;TRUE; Kemal
 Behavior Driven Development;Değerlendir;Teknikler;TRUE;BDD (Behavior Driven Development) TDD yaklaşımına ek olarak metotların gerçekleştirim detayları yerine senaryoların test edilmesini gözetir. Bu sayede unit testlerin kod gerçekleştirim detaylarına bağımlılığı azaltılmış olur.
-Progressive Web Applications;Değerlendir;Teknikler;TRUE; Umut
+Progressive Web Applications;Değerlendir;Teknikler;TRUE; Progressive Web Applications (PWA), kullanıcılara masaüstü uygulama benzeri bir deneyim sunmak için modern web yeteneklerini kullanan bir web geliştirme yaklaşımıdır. Bu uygulamalar tarayıcılarda önbelleklebilir ve internet erişimi olmadığında da kullanıcı dostu bir arayüz sağlayabilirler. Ayrıca masaüstüne kısayolları oluşturulabilir ve bir native uygulama gibi kolay erişim sağlanabilir.
 Stored Procedure gibi veritabanı bileşenlerinde iş kuralları geliştirmek;Kaçın;Teknikler;FALSE; Kemal
-Fazla soyutlamayı basitliğe tercih etmek;Kaçın;Teknikler;FALSE; Umut
+Fazla soyutlamayı basitliğe tercih etmek;Kaçın;Teknikler;FALSE; "Gereksiz ve erken optimizasyon tüm kötülüklerin anasıdır" felsefesini benimsemek ve her zaman çözmek istediğimiz problemlere odaklanmak bireysel ve kurumsal verimliliğimizi arttıracağı gibi motivasyona da olumlu etkisi olacaktır. Her zaman tek bir doğru olmadığını da akılda bulundururken "Buna <b>şimdi</b> ihtiyacımız var mı?", "Desteklemek istediğim bu yetenek ne kadar değer katacak" gibi soruları kendimize sormalıyız. YAGNI ve KISS bizim özümsediğimiz yaklaşımlar ve Albert Einstein'a atıf edilmiş şu söze katılıyoruz: "Everything should be made as simple as possible, but not simpler."
 Platform soyutlamalarını tekrar soyutlamak;Kaçın;Teknikler;FALSE;Geliştirme platformları içindeki soyutlanmış yapıların üzerine uygulama katmanı seviyesinde tekrar soyutlama yapıları eklemek olarak tanımlanan bu yöntemden kesinlikle kaçınmalısınız. Bu duruma örnek olarak .Net Core içinde gelen IConfiguration, ILogger gibi arayüzlerin üzerine, uygulamaya özel yeni soyutlama arayüzleri eklemek verilebilir. Yeni bir soyutlama katmanı geliştirmek yerine, platform üzerinde hazır gelen soyutlamaların neden yapıldığını, bunların nasıl kullanılabileceğini anlamak ilk amaç olmalıdır. 
 .Net Core;Benimse;Platformlar;FALSE; Kemal
 Single Page Application;Benimse;Platformlar;FALSE;Browser içinde, tekrar sayfa yüklemeden çalışan uygulamalara Single Page Application ismi verilmektedir. Hızlı çalışmaları, offline çalışmaya uygun olmaları, kullanıcıya masaüstü bir uygulama ile çalışmaya benzer bir deneyim sunmaları açısından geleneksel sunucu uygulamaları yerine tercih edilmelidirler.
@@ -75,7 +75,7 @@ Webpack;Deneyimle;Diller & Kütüphaneler;FALSE;Frontend uygulamaları geliştir
 Linquest;Deneyimle;Diller & Kütüphaneler;TRUE; Umut
 Spring Cloud;Deneyimle;Diller & Kütüphaneler;FALSE; Sevi
 Dapper;Deneyimle;Diller & Kütüphaneler;FALSE; Kemal
-SCSS;Değerlendir;Diller & Kütüphaneler;TRUE;SCSS; CSS içinde birçok programlama yapısının kullanılabilmesine olanak veren bir CSS ön-işlemcisidir. CSS içinde değişkenler tanımlanmasına, matematiksel operasyonlar gerçekleştirilmesine, döngüler tanımlanabilmesine imkan verir. Bu nedenle CSS yerine kullanılması değerlendirilebilir.
+SCSS;Değerlendir;Diller & Kütüphaneler;TRUE;SCSS, CSS içinde birçok programlama yapısının kullanılabilmesine olanak veren bir CSS ön-işlemcisidir. CSS içinde değişkenler tanımlanmasına, matematiksel operasyonlar gerçekleştirilmesine, döngüler tanımlanabilmesine imkan verir. Bu nedenle CSS yerine kullanılması değerlendirilebilir.
 Angular;Değerlendir;Diller & Kütüphaneler;FALSE; Kemal
 Angular.js;Kaçın;Diller & Kütüphaneler;FALSE; Kemal
 Ember.js;Kaçın;Diller & Kütüphaneler;FALSE; Kemal
