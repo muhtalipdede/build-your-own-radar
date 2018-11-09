@@ -227,7 +227,7 @@ function plotFooter(content) {
         .append('div')
         .attr('class', 'footer-content')
         .append('p')
-        .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. ');
+        .html('<a href="https://github.com/DogusTeknoloji/build-your-own-radar">Project</a> Forked From <a href="https://github.com/thoughtworks/build-your-own-radar">ThoughtWorks Radar</a>');
 }
 
 function plotBanner(content, text) {
