@@ -46,7 +46,7 @@ Selenoid;Değerlendir;Platformlar;TRUE;Selenoid, Selenium ile yazılan UI test o
 MS SQL Server;Kaçın;Platformlar;FALSE; Kemal
 Web Forms;Kaçın;Platformlar;FALSE; Kemal
 Visual Studio Code;Benimse;Araçlar;FALSE; Umut
-Git;Benimse;Araçlar;FALSE; Ali
+Git;Benimse;Araçlar;FALSE;Git, ilk olarak Linus Torvalds tarafından geliştirilen kaynak kod yönetim sistemidir. Açık kaynak bir üründür. Hafif, hızlı ve dağıtık yapıda çalıştığı için tercih edilir.
 Postman;Benimse;Araçlar;FALSE; Ali
 Kong;Benimse;Araçlar;FALSE; Sevi
 Kibana;Benimse;Araçlar;FALSE;ElasticSearch üzerinde depolanan verinin özel sorgularla incelenebilmesini, dashboard konsepti ile sunulmasını sağlayan aracın kullanılması tavsiye edilmektedir.
