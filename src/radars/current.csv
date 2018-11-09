@@ -1,85 +1,85 @@
-name,ring,quadrant,isNew,description
-Mimari Tasarım Kayıtları (LADR),Benimse,Teknikler,FALSE, Sevi
-Service Design Canvas,Benimse,Teknikler,TRUE, Umut
-Event Storming,Benimse,Teknikler,FALSE,Event Storming, bir domain içinde gerçekleşen süreçlerin tanımlanması için uygulanan workshop tarzında bir aktivitedir. İş uzmanları, geliştiriciler ve analistlerin de bulunabileceği, bilgisayar gerektirmeyen ve iş süreçlerinin kolayca anlaşılabilmesini sağlayan bir modelleme yöntemi olan Event Storming'in tüm projelerde kullanılmasını tavsiye ediyoruz.
-Unit Test Geliştirme,Benimse,Teknikler,FALSE, Ali
-Pair Programming,Benimse,Teknikler,FALSE, Ali
-Code Review,Benimse,Teknikler,FALSE, Ali
-İstemci Taraflı Sorgu,Deneyimle,Teknikler,FALSE, Umut
-Domain Driven Design,Deneyimle,Teknikler,FALSE,Sürekli gelişen, evrimleşen uygulama modelinin birbirleriyle ilişkili parçalara ayrılmasını kolaylaştırmayı hedefleyen bir domain modelleme yöntemidir. Mikroservis mimarilerinde, servis sınırlarının <i>Bounded Context</i> kavramı ile belirlenebilmesi açısından kullanılması tavsiye edilmektedir.
-Hobi Projesi Geliştirme,Deneyimle,Teknikler,FALSE, Her yazılım geliştirmeciye; yeni teknolojileri, araçları, platformları, deneyimleyebilmesi için, ilgisini çeken bir konuya odaklı hobi projeleri ile uğraşmalarını tavsiye ediyoruz.
-Microservices,Deneyimle,Teknikler,FALSE, Umut
-Micro ORM,Deneyimle,Teknikler,FALSE, Micro ORM'ler, genel olarak ORM'lerin sahip olduğu caching, concurrency control, change tracking vb. gibi gelişmiş ve kısmen karmaşık özelliklere sahip olmayan, çok daha basit, yalın ve sadece sorguları veritabanı nesneleriyle eşleme ile görevli yapılardır. Sorgulara tam hakimiyet, basitlik ve hızlı çalışma sağladığı faydalar arasında sayılabilir. Proje gereksinimlerine göre ORM veya Micro ORM kullanımı iyi değerlendirilmeli. Hız çok kritikse, SQL yazmak sorun oluşturmuyorsa veya tertcih ediliyorsa, karmaşık bir veritabanı yapısı yoksa Micro ORM'ler tercih edilebilir.
-Test Driven Development,Deneyimle,Teknikler,TRUE, Ali
-Distributed SAGA Pattern,Değerlendir,Teknikler,TRUE, Sevi
-Eventual Consistency,Değerlendir,Teknikler,TRUE, Sevi
-CQRS,Değerlendir,Teknikler,TRUE, Sevi
-Teknik Paylaşımlar (Brown Bag Sessions),Değerlendir,Teknikler,TRUE, Genellikle öğle arasında, eğitici amaçla herhangi bir konuda paylaşım yapılan kısa süreli etkinliklerdir. Önceden belirlenmiş konulara bir veya birkaç kişi çalışarak/tecrübe ederek ilgili zaman diliminde diğer arkadaşlarıyla izlenimlerini/bilgilerini paylaşır.
-Behavior Driven Development,Değerlendir,Teknikler,TRUE, Ali
-Progressive Web Applications,Değerlendir,Teknikler,TRUE, Umut
-Stored Procedure gibi veritabanı bileşenlerinde iş kuralları geliştirmek,Kaçın,Teknikler,FALSE, Eskilerden gelen bu alışkanlığın oldukça tehlikeli sonuçları olduğunu görüldüğünden, "Stored Procedure", "User-Defined Function" vb. veritabanı ögelerinde iş kurallarının yer almasından kaçınılmalı. Veritabanları, verilerin saklandığı yapılardan öteye gitmemeli, başka görevler üstlenmemeli.
-Fazla soyutlamayı basitliğe tercih etmek,Kaçın,Teknikler,FALSE, Umut
-Platform soyutlamalarını tekrar soyutlamak,Kaçın,Teknikler,FALSE,Geliştirme platformları içindeki soyutlanmış yapıların üzerine uygulama katmanı seviyesinde tekrar soyutlama yapıları eklemek olarak tanımlanan bu yöntemden kesinlikle kaçınmalısınız. Bu duruma örnek olarak .Net Core içinde gelen IConfiguration, ILogger gibi arayüzlerin üzerine, uygulamaya özel yeni soyutlama arayüzleri eklemek verilebilir. Yeni bir soyutlama katmanı geliştirmek yerine, platform üzerinde hazır gelen soyutlamaların neden yapıldığını, bunların nasıl kullanılabileceğini anlamak ilk amaç olmalıdır. 
-.Net Core,Benimse,Platformlar,FALSE, İlk çıktığı 2016 yılından bu yana hızla popülerliği artan .Net Core, sürekli gelişim halinde, aktif bir açık kaynak topluluğu olan, üretim ortamı olgunluğu yeterli bir platform haline geldi. Baştan aşağı yeniden ele alınarak geliştirilen, .Net Framework'ün hantallıklarından kurtulmuş, hafif, açık kaynak, bulut uyumlu, platform bağımsız, modüler olarak tasarlnana .Net Core kullanımını, sunucu taraflı uygulama geliştirmeleri için tavsiye ediyoruz. <a href="https://docs.microsoft.com/tr-tr/dotnet/core/">Resmi .Net Core dokümantasyonunu</a> oldukça öğretici ve takibi kolay buluyoruz, incelenmesini özellikle öneririz.
-Single Page Application,Benimse,Platformlar,FALSE,Browser içinde, tekrar sayfa yüklemeden çalışan uygulamalara Single Page Application ismi verilmektedir. Hızlı çalışmaları, offline çalışmaya uygun olmaları, kullanıcıya masaüstü bir uygulama ile çalışmaya benzer bir deneyim sunmaları açısından geleneksel sunucu uygulamaları yerine tercih edilmelidirler.
-Client Side - MVVM,Benimse,Platformlar,FALSE, Umut
-Azure DevOps (VSTS),Benimse,Platformlar,FALSE, Sevi
-Docker,Benimse,Platformlar,FALSE, Sevi
-PostgreSQL,Benimse,Platformlar,TRUE, Açık kaynak veritabanları arasında en gelişmiş ilişkisel veritabanı <a href="https://www.postgresql.org/">PostgreSQL</a>'i, RDBMS ile ilerlenecek projelerde birinci tercih olarak öneriyoruz. 
-Merkezi Loglama İçin Graylog/Elastic/Kibana,Benimse,Platformlar,TRUE, Umut
-Redis,Benimse,Platformlar,FALSE,Redis, veritabanı, cache ve message broker olarak da kullanılabilen açık kaynak kodlu bir in-memory veri deposudur. Cache kullanımı gerektiren uygulamalarda tercih edilmelidir.
-mongoDB,Benimse,Platformlar,FALSE,MongoDB, bir şemasız (NoSQL/Document) veritabanı sistemidir. Yoğun ilişkisel veri saklanma ihtiyacı olmayan, ya da dinamik ve değişken veri saklama ihtiyacı olan projelerde tercih edilmelidir.
-MySQL,Deneyimle,Platformlar,TRUE, Açık kaynak veritabanları arasına en popüler olan <a href="https://www.mysql.com/">MySQL</a>'i, basit veritabanı işlemleri ile ilerlenecek, çok karmaşık yapıya sahip olmayan/olmayacak projelerde deneyimlenebilir.
-Github,Deneyimle,Platformlar,FALSE, Umut
-Elastic,Deneyimle,Platformlar,FALSE,Elastic, açık kaynak kodlu, dağıtık, ölçeklenebilir ve çok yüksek performanslı bir arama motorudur. Text ağırlıklı aramalarda tercih edilmelidir.
-Azure,Deneyimle,Platformlar,FALSE, Sevi
-Kubernetes,Deneyimle,Platformlar,FALSE, Sevi
-Testinium,Deneyimle,Platformlar,TRUE, Ali
-Node.js,Deneyimle,Platformlar,FALSE,Node.js, Chrome V8 JavaScript motoru üzerine inşa edilmiş bir sunucu taraflı uygulama geliştirme platformudur. Node.js, aynı zamanda frontend uygulama geliştirme aşamasında tercih edilen paket yönetim araçlarını da sunmaktadır. Hem sunucu, hem de istemci uygulamalar geliştirirken tercih edilebilecek bir alternatif olarak düşünülebilir.
-AWS,Değerlendir,Platformlar,TRUE, Sevi
-Google Cloud,Değerlendir,Platformlar,TRUE, Sevi
-Azure Functions,Değerlendir,Platformlar,TRUE,Sunucusuz uygulama geliştirme yöntemleri son zamanlarda popülerlik kazanmıştır. Microsoft'un bu yöntem için sunduğu Azure Functions platformu, konfigüre edilebilen olaylarla tetiklenen ve isteğe göre birbirlerinden bağımsız olarak ölçeklendirilebilen fonksiyonların geliştirilebilmesine olanak vermektedir. Daha etkin maliyetlendirme özelliklerinden de ötürü, geleneksel WebAPI uygulamalarına alternatif olarak düşünülebilir.
-CockroachDB,Değerlendir,Platformlar,TRUE, Umut
-WebAssembly,Değerlendir,Platformlar,TRUE, <a href="https://webassembly.org/">WebAssembly (Wasm)</a>, tarayıcılar için geliştirilmiş low-level bir binary ve yazı formatıdır. C/C++/Rust gibi dillerle yazılmış kodların derlenip tatarıcıda çalışabilmesini sağlıyor. Şu an gelişme aşamasında olan ama gelecekte sıkça kullanılacak bir teknoloji olacağını öngördüğümüzden şimdiden deneyimlemenizi, gelişimini takip etmenizi tavsiye ediyoruz.
-Blazor,Değerlendir,Platformlar,TRUE, <a href="https://blazor.net/">Blazor</a> Microsoft'un, şu an deneysel olarak ilerleyen açık kaynak Webassembly çözümüdür. Razor sytnax'i ile kolayca aşina olunabilecek bir yapıya sahip. Bu projeyi de takip etmenizi ve deneyimlemenizi tavsiye ediyoruz.
-Selenoid,Değerlendir,Platformlar,TRUE, Ali
-MS SQL Server,Kaçın,Platformlar,FALSE, Yetkinlik, olgunluk anlamında hiçbir problemi olmamasına rağmen lisans maliyetleri nedeniyle olabildiğince MS SQL Server kullanılmaması gerekli. MS SQL Server'a özgü bir gereksinim, kullanım yoksa PostgreSQL veya MySQL alternatiflerini değerlendirilmeli.
-Web Forms,Kaçın,Platformlar,FALSE, Web safalarının Windows ekranları gibi gözükmesini sağlamak hedefiyle yola çıkılarak geliştirilmiş, güncelliğini yitirmiş, "View State", "Page Lifecycle" gibi kötü paratikler içeren Web Forms yaklaşımı ile proje geliştirmekten kaçınılmalı. 
-Visual Studio Code,Benimse,Araçlar,FALSE, Umut
-Git,Benimse,Araçlar,FALSE, Ali
-Postman,Benimse,Araçlar,FALSE, Ali
-Kong,Benimse,Araçlar,FALSE, Sevi
-Kibana,Benimse,Araçlar,FALSE,ElasticSearch üzerinde depolanan verinin özel sorgularla incelenebilmesini, dashboard konsepti ile sunulmasını sağlayan aracın kullanılması tavsiye edilmektedir.
-OpenCover,Benimse,Araçlar,FALSE, Ali
-AxoCover,Benimse,Araçlar,TRUE, Ali
-RabbitMQ,Deneyimle,Araçlar,FALSE, Umut
-Yarn,Deneyimle,Araçlar,TRUE, Umut
-Coverlet,Deneyimle,Araçlar,TRUE, Ali
-PowerBI,Deneyimle,Araçlar,TRUE, Sevi
-Sketch ile Prototipleştirme,Değerlendir,Araçlar,TRUE, Umut
-Apache Kafka,Değerlendir,Araçlar,TRUE, Gerçek zamanlı veri akışı işleme aracı ve CQRS/Event Sourcing uygulamalarında "Single source of truth" kavramı çerçevesinde tüm olaylar için bir veri deposu olarak kullanılması tavsiye edilmektedir.
-Prometheus,Değerlendir,Araçlar,TRUE, "<a href='https://prometheus.io/'>Prometheus</a> açık kaynak bir izleme (monitoring) ve uyarma (alerting) aracıdır. <a href='https://www.cncf.io/'>Cloud Native Computing Foundation (CNCF)</a> tarafından 'mezun' (graduate) statüsüne alınmış ikinci projedir."
-C# 7,Benimse,Diller & Kütüphaneler,FALSE, Umut
-TypeScript,Benimse,Diller & Kütüphaneler,FALSE, Umut
-Vue.js,Benimse,Diller & Kütüphaneler,FALSE,Single Page Application geliştirme kütüphaneleri içinde adaptasyon ve geliştirme kolaylığı avantajlarından ötürü kullanılması tercih edilmelidir.
-Java,Benimse,Diller & Kütüphaneler,FALSE, Sevi
-Entity Framework Core,Benimse,Diller & Kütüphaneler,FALSE, Umut
-IdentityServer,Benimse,Diller & Kütüphaneler,FALSE, OpenID Connect ve OAuth2.0 gibi endusitri standartları üzerine kurulmuş açık kaynak <a href="https://identityserver.io/">IdentityServer</a> kütüphanesinin, "Authentication", "Single Sign-On/Sign-Out" çözümü olarak kullanılmasını tavsiye ediyoruz.
-xUnit,Benimse,Diller & Kütüphaneler,FALSE, Ali
-Selenium,Benimse,Diller & Kütüphaneler,FALSE, Ali
-BatMap,Benimse,Diller & Kütüphaneler,FALSE, Umut
-GoLang,Deneyimle,Diller & Kütüphaneler,TRUE, Sevi
-React.js,Deneyimle,Diller & Kütüphaneler,TRUE,Single Page Application geliştirme kütüphaneleri içinde adaptasyon ve geliştirme kolaylığı avantajlarından ötürü kullanılması düşünülebilir.
-Pug.js,Deneyimle,Diller & Kütüphaneler,FALSE,HTML markup yerine daha sade olması ve içinde gelen güçlü mixin geliştirme gibi özelliklerinden ötürü kullanımı düşünülebilir.
-Webpack,Deneyimle,Diller & Kütüphaneler,FALSE,Frontend uygulamaları geliştirme sürecinde, özellikle SPA uygulamaların bileşenlerinin konfigüre edilmesi ve paketlenmesi için kullanımı düşünülebilir.
-Linquest,Deneyimle,Diller & Kütüphaneler,TRUE, Umut
-Spring Cloud,Deneyimle,Diller & Kütüphaneler,FALSE, Sevi
-Dapper,Deneyimle,Diller & Kütüphaneler,FALSE, En popüler ve başarılı Micro ORM çözümlerinden olan <a href="https://stackexchange.github.io/Dapper/">Dapper</a>'ı deneyimlemenizi öneriyoruz.
-SCSS,Değerlendir,Diller & Kütüphaneler,TRUE,SCSS, CSS içinde birçok programlama yapısının kullanılabilmesine olanak veren bir CSS ön-işlemcisidir. CSS içinde değişkenler tanımlanmasına, matematiksel operasyonlar gerçekleştirilmesine, döngüler tanımlanabilmesine imkan verir. Bu nedenle CSS yerine kullanılması değerlendirilebilir.
-Angular,Değerlendir,Diller & Kütüphaneler,FALSE, İstemci taraflı javascript framework'ü seçilirken <a href="https://angular.io/">Angular</a> da değerlendirmeye dahil edlebilir. Sorunlu bir versiyon geçmişi olması güven kaybettirse de, halen oldukça popüler ve yeni versiyonlarıyla daha stabil bir kullanıma sahip.
-Angular.js,Kaçın,Diller & Kütüphaneler,FALSE, Hızlı değişime ve gelişime sahip olan istemci taraflı javascript kütüphaneleri içeirisnde popülerliğini ve güncelliğini yitirmiş, geleceği pek olmayanların kullanımından kaçınılmalı.
-Ember.js,Kaçın,Diller & Kütüphaneler,FALSE, Hızlı değişime ve gelişime sahip olan istemci taraflı javascript kütüphaneleri içeirisnde popülerliğini ve güncelliğini yitirmiş, geleceği pek olmayanların kullanımından kaçınılmalı.
-Knockout.js,Kaçın,Diller & Kütüphaneler,FALSE, Hızlı değişime ve gelişime sahip olan istemci taraflı javascript kütüphaneleri içeirisnde popülerliğini ve güncelliğini yitirmiş, geleceği pek olmayanların kullanımından kaçınılmalı.
-jQuery,Kaçın,Diller & Kütüphaneler,FALSE, Bir döneme damgasını vurmuş jQuery'nin yaptığı neredeyse herşeyi ve çok daha fazlasını yapan kütüphaneler varken ve jQuery ile çalışırken "Seperation of Concerns" prensibinin ihlaili sıkça gerçekleştiğinden, kullanımından kaçınmanızı öneriyoruz.
-Backbone.js,Kaçın,Diller & Kütüphaneler,FALSE, Hızlı değişime ve gelişime sahip olan istemci taraflı javascript kütüphaneleri içeirisnde popülerliğini ve güncelliğini yitirmiş, geleceği pek olmayanların kullanımından kaçınılmalı.
-3. Parti .Net Core IoC Frameworkler,Kaçın,Diller & Kütüphaneler,FALSE, .Net Core ile birlikte gelen, gayet yeterli ve kullanışlı olan IoC yapısı yerine, çok elzem değil ise, bağımlılık oluşturmamak adına 3. parti bir IoC kütüpanesi kullanılmasını önermiyoruz.
+name;ring;quadrant;isNew;description
+Mimari Tasarım Kayıtları (LADR);Benimse;Teknikler;FALSE; Sevi
+Service Design Canvas;Benimse;Teknikler;TRUE; Umut
+Event Storming;Benimse;Teknikler;FALSE;Event Storming, bir domain içinde gerçekleşen süreçlerin tanımlanması için uygulanan workshop tarzında bir aktivitedir. İş uzmanları, geliştiriciler ve analistlerin de bulunabileceği, bilgisayar gerektirmeyen ve iş süreçlerinin kolayca anlaşılabilmesini sağlayan bir modelleme yöntemi olan Event Storming'in tüm projelerde kullanılmasını tavsiye ediyoruz.
+Unit Test Geliştirme;Benimse;Teknikler;FALSE;Unit Testler metotları ve yazılım bileşenlerini soyutlanmış olarak test etmede kullanılır. Bunlar en alt seviyedeki testlerdir. Yazılımcı için önemi 'Kodlarınız Unit Test yazmayacak kadar değersiz mi?' vurgusuyla dile getirilir.    
+Pair Programming;Benimse;Teknikler;FALSE;Pair Programming kodların iki yazılımcının aktif katkısıyla yazılmasıdır. Bu yöntemle iki yazılımcı interaktif olarak kod tasarımı, organizasyonu, incelemesi ve değişikliği yapabilir.
+Code Review;Benimse;Teknikler;FALSE;Code Review bir kişi tarafından yazılan kodların diğerleri tarafından pasif olarak değerlendirilmesidir. Kodlarda gözle görülebilecek hataları bulmakta ve yetkinliğin ekip geneline yayılmasında faydalı olmaktadır.
+İstemci Taraflı Sorgu;Deneyimle;Teknikler;FALSE; Umut
+Domain Driven Design;Deneyimle;Teknikler;FALSE;Sürekli gelişen; evrimleşen uygulama modelinin birbirleriyle ilişkili parçalara ayrılmasını kolaylaştırmayı hedefleyen bir domain modelleme yöntemidir. Mikroservis mimarilerinde, servis sınırlarının <i>Bounded Context</i> kavramı ile belirlenebilmesi açısından kullanılması tavsiye edilmektedir.
+Hobi Projesi Geliştirme;Deneyimle;Teknikler;FALSE; Her yazılım geliştirmeciye, yeni teknolojileri, araçları, platformları, deneyimleyebilmesi için, ilgisini çeken bir konuya odaklı hobi projeleri ile uğraşmalarını tavsiye ediyoruz.
+Microservices;Deneyimle;Teknikler;FALSE; Umut
+Micro ORM;Deneyimle;Teknikler;FALSE; Micro ORM'ler, genel olarak ORM'lerin sahip olduğu caching, concurrency control, change tracking vb. gibi gelişmiş ve kısmen karmaşık özelliklere sahip olmayan, çok daha basit, yalın ve sadece sorguları veritabanı nesneleriyle eşleme ile görevli yapılardır. Sorgulara tam hakimiyet, basitlik ve hızlı çalışma sağladığı faydalar arasında sayılabilir. Proje gereksinimlerine göre ORM veya Micro ORM kullanımı iyi değerlendirilmeli. Hız çok kritikse, SQL yazmak sorun oluşturmuyorsa veya tertcih ediliyorsa, karmaşık bir veritabanı yapısı yoksa Micro ORM'ler tercih edilebilir.
+Test Driven Development;Deneyimle;Teknikler;TRUE;TDD (Test Driven Development) yapılması gereken testleri baştan düşünerek yazılım geliştirmek anlamına gelir. Bu yaklaşımı uygulayan bir yazılımcı kodlarını unit testleriyle beraber geliştirir.
+Distributed SAGA Pattern;Değerlendir;Teknikler;TRUE; Sevi
+Eventual Consistency;Değerlendir;Teknikler;TRUE; Sevi
+CQRS;Değerlendir;Teknikler;TRUE; Sevi
+Teknik Paylaşımlar (Brown Bag Sessions);Değerlendir;Teknikler;TRUE; Genellikle öğle arasında, eğitici amaçla herhangi bir konuda paylaşım yapılan kısa süreli etkinliklerdir. Önceden belirlenmiş konulara bir veya birkaç kişi çalışarak/tecrübe ederek ilgili zaman diliminde diğer arkadaşlarıyla izlenimlerini/bilgilerini paylaşır.
+Behavior Driven Development;Değerlendir;Teknikler;TRUE;BDD (Behavior Driven Development) TDD yaklaşımına ek olarak metotların gerçekleştirim detayları yerine senaryoların test edilmesini gözetir. Bu sayede unit testlerin kod gerçekleştirim detaylarına bağımlılığı azaltılmış olur.
+Progressive Web Applications;Değerlendir;Teknikler;TRUE; Umut
+Stored Procedure gibi veritabanı bileşenlerinde iş kuralları geliştirmek;Kaçın;Teknikler;FALSE; Eskilerden gelen bu alışkanlığın oldukça tehlikeli sonuçları olduğunu görüldüğünden, "Stored Procedure", "User-Defined Function" vb. veritabanı ögelerinde iş kurallarının yer almasından kaçınılmalı. Veritabanları, verilerin saklandığı yapılardan öteye gitmemeli, başka görevler üstlenmemeli.
+Fazla soyutlamayı basitliğe tercih etmek;Kaçın;Teknikler;FALSE; Umut
+Platform soyutlamalarını tekrar soyutlamak;Kaçın;Teknikler;FALSE;Geliştirme platformları içindeki soyutlanmış yapıların üzerine uygulama katmanı seviyesinde tekrar soyutlama yapıları eklemek olarak tanımlanan bu yöntemden kesinlikle kaçınmalısınız. Bu duruma örnek olarak .Net Core içinde gelen IConfiguration, ILogger gibi arayüzlerin üzerine, uygulamaya özel yeni soyutlama arayüzleri eklemek verilebilir. Yeni bir soyutlama katmanı geliştirmek yerine, platform üzerinde hazır gelen soyutlamaların neden yapıldığını, bunların nasıl kullanılabileceğini anlamak ilk amaç olmalıdır. 
+.Net Core;Benimse;Platformlar;FALSE; İlk çıktığı 2016 yılından bu yana hızla popülerliği artan .Net Core, sürekli gelişim halinde, aktif bir açık kaynak topluluğu olan, üretim ortamı olgunluğu yeterli bir platform haline geldi. Baştan aşağı yeniden ele alınarak geliştirilen, .Net Framework'ün hantallıklarından kurtulmuş, hafif, açık kaynak, bulut uyumlu, platform bağımsız, modüler olarak tasarlnana .Net Core kullanımını, sunucu taraflı uygulama geliştirmeleri için tavsiye ediyoruz. <a href="https://docs.microsoft.com/tr-tr/dotnet/core/">Resmi .Net Core dokümantasyonunu</a> oldukça öğretici ve takibi kolay buluyoruz, incelenmesini özellikle öneririz.
+Single Page Application;Benimse;Platformlar;FALSE;Browser içinde, tekrar sayfa yüklemeden çalışan uygulamalara Single Page Application ismi verilmektedir. Hızlı çalışmaları, offline çalışmaya uygun olmaları, kullanıcıya masaüstü bir uygulama ile çalışmaya benzer bir deneyim sunmaları açısından geleneksel sunucu uygulamaları yerine tercih edilmelidirler.
+Client Side - MVVM;Benimse;Platformlar;FALSE; Umut
+Azure DevOps (VSTS);Benimse;Platformlar;FALSE; Sevi
+Docker;Benimse;Platformlar;FALSE; Sevi
+PostgreSQL;Benimse;Platformlar;TRUE; Açık kaynak veritabanları arasında en gelişmiş ilişkisel veritabanı <a href="https://www.postgresql.org/">PostgreSQL</a>'i, RDBMS ile ilerlenecek projelerde birinci tercih olarak öneriyoruz. 
+Merkezi Loglama İçin Graylog/Elastic/Kibana;Benimse;Platformlar;TRUE; Umut
+Redis;Benimse;Platformlar;FALSE;Redis, veritabanı, cache ve message broker olarak da kullanılabilen açık kaynak kodlu bir in-memory veri deposudur. Cache kullanımı gerektiren uygulamalarda tercih edilmelidir.
+mongoDB;Benimse;Platformlar;FALSE;MongoDB, bir şemasız (NoSQL/Document) veritabanı sistemidir. Yoğun ilişkisel veri saklanma ihtiyacı olmayan, ya da dinamik ve değişken veri saklama ihtiyacı olan projelerde tercih edilmelidir.
+MySQL;Deneyimle;Platformlar;TRUE; Açık kaynak veritabanları arasına en popüler olan <a href="https://www.mysql.com/">MySQL</a>'i, basit veritabanı işlemleri ile ilerlenecek, çok karmaşık yapıya sahip olmayan/olmayacak projelerde deneyimlenebilir.
+Github;Deneyimle;Platformlar;FALSE; Umut
+Elastic;Deneyimle;Platformlar;FALSE;Elastic, açık kaynak kodlu, dağıtık, ölçeklenebilir ve çok yüksek performanslı bir arama motorudur. Text ağırlıklı aramalarda tercih edilmelidir.
+Azure;Deneyimle;Platformlar;FALSE; Sevi
+Kubernetes;Deneyimle;Platformlar;FALSE; Sevi
+Testinium;Deneyimle;Platformlar;TRUE;Testinium, BDD yaklaşımı ile test yazmak, test senaryolarını çalıştırıp raporlamak gibi amaçlarla kullanılan ve bulutta çalışabien bir uygulamadır. Saha BT firması tarafından geliştirilen lisanslı bir üründür. 
+Node.js;Deneyimle;Platformlar;FALSE;Node.js; Chrome V8 JavaScript motoru üzerine inşa edilmiş bir sunucu taraflı uygulama geliştirme platformudur. Node.js, aynı zamanda frontend uygulama geliştirme aşamasında tercih edilen paket yönetim araçlarını da sunmaktadır. Hem sunucu, hem de istemci uygulamalar geliştirirken tercih edilebilecek bir alternatif olarak düşünülebilir.
+AWS;Değerlendir;Platformlar;TRUE; Sevi
+Google Cloud;Değerlendir;Platformlar;TRUE; Sevi
+Azure Functions;Değerlendir;Platformlar;TRUE;Sunucusuz uygulama geliştirme yöntemleri son zamanlarda popülerlik kazanmıştır. Microsoft'un bu yöntem için sunduğu Azure Functions platformu, konfigüre edilebilen olaylarla tetiklenen ve isteğe göre birbirlerinden bağımsız olarak ölçeklendirilebilen fonksiyonların geliştirilebilmesine olanak vermektedir. Daha etkin maliyetlendirme özelliklerinden de ötürü, geleneksel WebAPI uygulamalarına alternatif olarak düşünülebilir.
+CockroachDB;Değerlendir;Platformlar;TRUE; Umut
+WebAssembly;Değerlendir;Platformlar;TRUE; <a href="https://webassembly.org/">WebAssembly (Wasm)</a>, tarayıcılar için geliştirilmiş low-level bir binary ve yazı formatıdır. C/C++/Rust gibi dillerle yazılmış kodların derlenip tatarıcıda çalışabilmesini sağlıyor. Şu an gelişme aşamasında olan ama gelecekte sıkça kullanılacak bir teknoloji olacağını öngördüğümüzden şimdiden deneyimlemenizi, gelişimini takip etmenizi tavsiye ediyoruz.
+Blazor;Değerlendir;Platformlar;TRUE; <a href="https://blazor.net/">Blazor</a> Microsoft'un, şu an deneysel olarak ilerleyen açık kaynak Webassembly çözümüdür. Razor sytnax'i ile kolayca aşina olunabilecek bir yapıya sahip. Bu projeyi de takip etmenizi ve deneyimlemenizi tavsiye ediyoruz.
+Selenoid;Değerlendir;Platformlar;TRUE;Selenoid, Selenium ile yazılan UI test otomasyonlarını Docker ile Containerized bir şekilde ve bulutta dağıtımlı olarak çalıştırılmasını sağlayan açık kaynak bir üründür. Selenoid çalışan testleri izleme ve video kayıt yapma desteği de vermektedir.
+MS SQL Server;Kaçın;Platformlar;FALSE; Yetkinlik, olgunluk anlamında hiçbir problemi olmamasına rağmen lisans maliyetleri nedeniyle olabildiğince MS SQL Server kullanılmaması gerekli. MS SQL Server'a özgü bir gereksinim, kullanım yoksa PostgreSQL veya MySQL alternatiflerini değerlendirilmeli.
+Web Forms;Kaçın;Platformlar;FALSE; Web safalarının Windows ekranları gibi gözükmesini sağlamak hedefiyle yola çıkılarak geliştirilmiş, güncelliğini yitirmiş, "View State", "Page Lifecycle" gibi kötü paratikler içeren Web Forms yaklaşımı ile proje geliştirmekten kaçınılmalı. 
+Visual Studio Code;Benimse;Araçlar;FALSE; Umut
+Git;Benimse;Araçlar;FALSE; Ali
+Postman;Benimse;Araçlar;FALSE; Ali
+Kong;Benimse;Araçlar;FALSE; Sevi
+Kibana;Benimse;Araçlar;FALSE;ElasticSearch üzerinde depolanan verinin özel sorgularla incelenebilmesini, dashboard konsepti ile sunulmasını sağlayan aracın kullanılması tavsiye edilmektedir.
+OpenCover;Benimse;Araçlar;FALSE; Ali
+AxoCover;Benimse;Araçlar;TRUE; Ali
+RabbitMQ;Deneyimle;Araçlar;FALSE; Umut
+Yarn;Deneyimle;Araçlar;TRUE; Umut
+Coverlet;Deneyimle;Araçlar;TRUE; Ali
+PowerBI;Deneyimle;Araçlar;TRUE; Sevi
+Sketch ile Prototipleştirme;Değerlendir;Araçlar;TRUE; Umut
+Apache Kafka;Değerlendir;Araçlar;TRUE; Gerçek zamanlı veri akışı işleme aracı ve CQRS/Event Sourcing uygulamalarında "Single source of truth" kavramı çerçevesinde tüm olaylar için bir veri deposu olarak kullanılması tavsiye edilmektedir.
+Prometheus;Değerlendir;Araçlar;TRUE; "<a href='https://prometheus.io/'>Prometheus</a> açık kaynak bir izleme (monitoring) ve uyarma (alerting) aracıdır. <a href='https://www.cncf.io/'>Cloud Native Computing Foundation (CNCF)</a> tarafından 'mezun' (graduate) statüsüne alınmış ikinci projedir."
+C# 7;Benimse;Diller & Kütüphaneler;FALSE; Umut
+TypeScript;Benimse;Diller & Kütüphaneler;FALSE; Umut
+Vue.js;Benimse;Diller & Kütüphaneler;FALSE;Single Page Application geliştirme kütüphaneleri içinde adaptasyon ve geliştirme kolaylığı avantajlarından ötürü kullanılması tercih edilmelidir.
+Java;Benimse;Diller & Kütüphaneler;FALSE; Sevi
+Entity Framework Core;Benimse;Diller & Kütüphaneler;FALSE; Umut
+IdentityServer;Benimse;Diller & Kütüphaneler;FALSE; OpenID Connect ve OAuth2.0 gibi endusitri standartları üzerine kurulmuş açık kaynak <a href="https://identityserver.io/">IdentityServer</a> kütüphanesinin, "Authentication", "Single Sign-On/Sign-Out" çözümü olarak kullanılmasını tavsiye ediyoruz.
+xUnit;Benimse;Diller & Kütüphaneler;FALSE; Ali
+Selenium;Benimse;Diller & Kütüphaneler;FALSE; Ali
+BatMap;Benimse;Diller & Kütüphaneler;FALSE; Umut
+GoLang;Deneyimle;Diller & Kütüphaneler;TRUE; Sevi
+React.js;Deneyimle;Diller & Kütüphaneler;TRUE;Single Page Application geliştirme kütüphaneleri içinde adaptasyon ve geliştirme kolaylığı avantajlarından ötürü kullanılması düşünülebilir.
+Pug.js;Deneyimle;Diller & Kütüphaneler;FALSE;HTML markup yerine daha sade olması ve içinde gelen güçlü mixin geliştirme gibi özelliklerinden ötürü kullanımı düşünülebilir.
+Webpack;Deneyimle;Diller & Kütüphaneler;FALSE;Frontend uygulamaları geliştirme sürecinde, özellikle SPA uygulamaların bileşenlerinin konfigüre edilmesi ve paketlenmesi için kullanımı düşünülebilir.
+Linquest;Deneyimle;Diller & Kütüphaneler;TRUE; Umut
+Spring Cloud;Deneyimle;Diller & Kütüphaneler;FALSE; Sevi
+Dapper;Deneyimle;Diller & Kütüphaneler;FALSE; En popüler ve başarılı Micro ORM çözümlerinden olan <a href="https://stackexchange.github.io/Dapper/">Dapper</a>'ı deneyimlemenizi öneriyoruz.
+SCSS;Değerlendir;Diller & Kütüphaneler;TRUE;SCSS; CSS içinde birçok programlama yapısının kullanılabilmesine olanak veren bir CSS ön-işlemcisidir. CSS içinde değişkenler tanımlanmasına, matematiksel operasyonlar gerçekleştirilmesine, döngüler tanımlanabilmesine imkan verir. Bu nedenle CSS yerine kullanılması değerlendirilebilir.
+Angular;Değerlendir;Diller & Kütüphaneler;FALSE; İstemci taraflı javascript framework'ü seçilirken <a href="https://angular.io/">Angular</a> da değerlendirmeye dahil edlebilir. Sorunlu bir versiyon geçmişi olması güven kaybettirse de, halen oldukça popüler ve yeni versiyonlarıyla daha stabil bir kullanıma sahip.
+Angular.js;Kaçın;Diller & Kütüphaneler;FALSE; Hızlı değişime ve gelişime sahip olan istemci taraflı javascript kütüphaneleri içeirisnde popülerliğini ve güncelliğini yitirmiş, geleceği pek olmayanların kullanımından kaçınılmalı.
+Ember.js;Kaçın;Diller & Kütüphaneler;FALSE; Hızlı değişime ve gelişime sahip olan istemci taraflı javascript kütüphaneleri içeirisnde popülerliğini ve güncelliğini yitirmiş, geleceği pek olmayanların kullanımından kaçınılmalı.
+Knockout.js;Kaçın;Diller & Kütüphaneler;FALSE; Hızlı değişime ve gelişime sahip olan istemci taraflı javascript kütüphaneleri içeirisnde popülerliğini ve güncelliğini yitirmiş, geleceği pek olmayanların kullanımından kaçınılmalı.
+jQuery;Kaçın;Diller & Kütüphaneler;FALSE; Bir döneme damgasını vurmuş jQuery'nin yaptığı neredeyse herşeyi ve çok daha fazlasını yapan kütüphaneler varken ve jQuery ile çalışırken "Seperation of Concerns" prensibinin ihlaili sıkça gerçekleştiğinden, kullanımından kaçınmanızı öneriyoruz.
+Backbone.js;Kaçın;Diller & Kütüphaneler;FALSE; Hızlı değişime ve gelişime sahip olan istemci taraflı javascript kütüphaneleri içeirisnde popülerliğini ve güncelliğini yitirmiş, geleceği pek olmayanların kullanımından kaçınılmalı.
+3. Parti .Net Core IoC Frameworkler;Kaçın;Diller & Kütüphaneler;FALSE; .Net Core ile birlikte gelen, gayet yeterli ve kullanışlı olan IoC yapısı yerine, çok elzem değil ise, bağımlılık oluşturmamak adına 3. parti bir IoC kütüpanesi kullanılmasını önermiyoruz.
