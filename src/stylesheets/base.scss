@@ -154,8 +154,16 @@ body {
 
 }
 
-
 @media screen {
+
+  .ring-bullet {
+    color: #1ebccd;
+    padding-right: 4px;
+  }
+
+  .protip-skin-default--scheme-black.protip-container {
+    font-family: unset;
+  }
 
   #footer .footer-content p {
     text-align: center;
@@ -345,7 +353,7 @@ body {
               border-bottom: 1px solid rgb(119, 119, 119);
               padding: 20px;
               color: $grey-text;
-              font-size: 14px;
+              font-size: 15px;
             }
 
             transition: max-height 0.2s ease;

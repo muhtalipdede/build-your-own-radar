@@ -130,16 +130,31 @@ const Radar = function (size, radar) {
 
   function addRing(ring, order) {
     var table = d3.select('.quadrant-table.' + order);
-    // table.append('h3').text(ring);
-
     let h3 = table.append('h3');
     h3.append('span')
-      .attr('style', 'color:#1ebccd; padding-right: 4px;')
+      .attr('class', 'ring-bullet')
       .text('●');
     h3.append('span').text(ring);
-
-    // <span class="dot techniques">●</span>
+    h3.append('span')
+      .attr('class', 'tooltip-icon protip')
+      .attr('data-pt-title', getRingTip(ring))
+      .text('?');
     return table.append('ul');
+  }
+
+  function getRingTip(ring) {
+    switch (ring.toLowerCase()) {
+      case 'benimse':
+        return 'Değerlerini kanıtladığına, projelerinizde güvenle kullanabileceğinize, çalışmalarınıza uygulayabileceğinize inanıyoruz.';
+      case 'deneyimle':
+        return 'Takip etmeyi, deneyimlemeyi tavsiye ediyoruz. Yakın zamanda daha çok yaygınlaşacak olan teknolojilerdir.';
+      case 'değerlendir':
+        return 'Araştırmaya değer görüyor ve gelecek vaad ettiğini düşünüyoruz.';
+      case 'kaçın':
+        return 'Kullanmaktan kaçınılmasını, kullanılıyorsa en kısa sürede güncel teknolojilerle değiştirilmesini tavsiye ediyoruz.';
+      default:
+        return '';
+    }
   }
 
   function calculateBlipCoordinates(blip, chance, minRadius, maxRadius, startAngle) {
