@@ -1,84 +1,85 @@
 name,ring,quadrant,isNew,description
-Mimari Tasarım Kayıtları (LADR),Benimse,Teknikler,FALSE,
-Service Design Canvas,Benimse,Teknikler,TRUE,
-Event Storming,Benimse,Teknikler,FALSE,
-Unit Test Geliştirme,Benimse,Teknikler,FALSE,
-Pair Programming,Benimse,Teknikler,FALSE,
-Code Review,Benimse,Teknikler,FALSE,
-İstemci Taraflı Sorgu,Deneyimle,Teknikler,FALSE,
-Domain Driven Design,Deneyimle,Teknikler,FALSE,
-Hobi Projesi Geliştirme,Deneyimle,Teknikler,FALSE,
-Microservices,Deneyimle,Teknikler,FALSE,
-Micro ORM,Deneyimle,Teknikler,FALSE,
-Test Driven Development,Deneyimle,Teknikler,TRUE,
-Distributed SAGA Pattern,Değerlendir,Teknikler,TRUE,
-Eventual Consistency,Değerlendir,Teknikler,TRUE,
-CQRS,Değerlendir,Teknikler,TRUE,
-Teknik Paylaşımlar (Brown Bag Sessions),Değerlendir,Teknikler,TRUE,
-Behavior Driven Development,Değerlendir,Teknikler,TRUE,
-Progressive Web Applications,Değerlendir,Teknikler,TRUE,
-Stored Procedure gibi veritabanı bileşenlerinde iş kuralları geliştirmek,Kaçın,Teknikler,FALSE,
-Fazla soyutlamayı basitliğe tercih etmek,Kaçın,Teknikler,FALSE,
-Platform soyutlamalarını tekrar soyutlamak,Kaçın,Teknikler,FALSE,
-.Net Core,Benimse,Platformlar,FALSE,
-Single Page Application,Benimse,Platformlar,FALSE,
-Client Side - MVVM,Benimse,Platformlar,FALSE,
-Azure DevOps (VSTS),Benimse,Platformlar,FALSE,
-Docker,Benimse,Platformlar,FALSE,
-PostgreSQL,Benimse,Platformlar,TRUE,
-Merkezi Loglama İçin Graylog/Elastic/Kibana,Benimse,Platformlar,TRUE,
-Redis,Benimse,Platformlar,FALSE,
-mongoDB,Benimse,Platformlar,FALSE,
-MySQL,Deneyimle,Platformlar,TRUE,
-Github,Deneyimle,Platformlar,FALSE,
-Elastic,Deneyimle,Platformlar,FALSE,
-Azure,Deneyimle,Platformlar,FALSE,
-Kubernetes,Deneyimle,Platformlar,FALSE,
-Testinium,Deneyimle,Platformlar,TRUE,
-Node.js,Deneyimle,Platformlar,FALSE,
-AWS,Değerlendir,Platformlar,TRUE,
-Google Cloud,Değerlendir,Platformlar,TRUE,
-Azure Functions,Değerlendir,Platformlar,TRUE,
-CockroachDB,Değerlendir,Platformlar,TRUE,
-WebAssembly,Değerlendir,Platformlar,TRUE,
-Blazor,Değerlendir,Platformlar,TRUE,
-Selenoid,Değerlendir,Platformlar,TRUE,
-MS SQL Server,Kaçın,Platformlar,FALSE,
-Web Forms,Kaçın,Platformlar,FALSE,
-Visual Studio Code,Benimse,Araçlar,FALSE,
-Git,Benimse,Araçlar,FALSE,
-Postman,Benimse,Araçlar,FALSE,
-Kong,Benimse,Araçlar,FALSE,
-Kibana,Benimse,Araçlar,FALSE,
-OpenCover,Benimse,Araçlar,FALSE,
-AxoCover,Benimse,Araçlar,TRUE,
-RabbitMQ,Deneyimle,Araçlar,FALSE,
-Yarn,Deneyimle,Araçlar,TRUE,
-Coverlet,Deneyimle,Araçlar,TRUE,
-PowerBI,Deneyimle,Araçlar,TRUE,
-Sketch ile Prototipleştirme,Değerlendir,Araçlar,TRUE,
-Apache Kafka,Değerlendir,Araçlar,TRUE,
-Prometheus,Değerlendir,Araçlar,TRUE,
-C# 7,Benimse,Diller & Kütüphaneler,FALSE,
-TypeScript,Benimse,Diller & Kütüphaneler,FALSE,
-Vue.js,Benimse,Diller & Kütüphaneler,FALSE,
-Java,Benimse,Diller & Kütüphaneler,FALSE,
-Entity Framework Core,Benimse,Diller & Kütüphaneler,FALSE,
-xUnit,Benimse,Diller & Kütüphaneler,FALSE,
-Selenium,Benimse,Diller & Kütüphaneler,FALSE,
-BatMap,Benimse,Diller & Kütüphaneler,FALSE,
-GoLang,Deneyimle,Diller & Kütüphaneler,TRUE,
-React.js,Deneyimle,Diller & Kütüphaneler,TRUE,
-Pug.js,Deneyimle,Diller & Kütüphaneler,FALSE,
-Webpack,Deneyimle,Diller & Kütüphaneler,FALSE,
-Linquest,Deneyimle,Diller & Kütüphaneler,TRUE,
-Spring Cloud,Deneyimle,Diller & Kütüphaneler,FALSE,
-Dapper,Deneyimle,Diller & Kütüphaneler,FALSE,
-SCSS,Değerlendir,Diller & Kütüphaneler,TRUE,
-Angular,Değerlendir,Diller & Kütüphaneler,FALSE,
-Angular.js,Kaçın,Diller & Kütüphaneler,FALSE,
-Ember.js,Kaçın,Diller & Kütüphaneler,FALSE,
-Knockout.js,Kaçın,Diller & Kütüphaneler,FALSE,
-jQuery,Kaçın,Diller & Kütüphaneler,FALSE,
-Backbone.js,Kaçın,Diller & Kütüphaneler,FALSE,
-3. Parti .Net Core IoC Frameworkler,Kaçın,Diller & Kütüphaneler,FALSE,
+Mimari Tasarım Kayıtları (LADR),Benimse,Teknikler,FALSE, Sevi
+Service Design Canvas,Benimse,Teknikler,TRUE, Umut
+Event Storming,Benimse,Teknikler,FALSE, Önsel
+Unit Test Geliştirme,Benimse,Teknikler,FALSE, Ali
+Pair Programming,Benimse,Teknikler,FALSE, Ali
+Code Review,Benimse,Teknikler,FALSE, Ali
+İstemci Taraflı Sorgu,Deneyimle,Teknikler,FALSE, Umut
+Domain Driven Design,Deneyimle,Teknikler,FALSE, Önsel
+Hobi Projesi Geliştirme,Deneyimle,Teknikler,FALSE, Kemal
+Microservices,Deneyimle,Teknikler,FALSE, Umut
+Micro ORM,Deneyimle,Teknikler,FALSE, Kemal
+Test Driven Development,Deneyimle,Teknikler,TRUE, Ali
+Distributed SAGA Pattern,Değerlendir,Teknikler,TRUE, Sevi
+Eventual Consistency,Değerlendir,Teknikler,TRUE, Sevi
+CQRS,Değerlendir,Teknikler,TRUE, Sevi
+Teknik Paylaşımlar (Brown Bag Sessions),Değerlendir,Teknikler,TRUE, Kemal
+Behavior Driven Development,Değerlendir,Teknikler,TRUE, Ali
+Progressive Web Applications,Değerlendir,Teknikler,TRUE, Umut
+Stored Procedure gibi veritabanı bileşenlerinde iş kuralları geliştirmek,Kaçın,Teknikler,FALSE, Kemal
+Fazla soyutlamayı basitliğe tercih etmek,Kaçın,Teknikler,FALSE, Umut
+Platform soyutlamalarını tekrar soyutlamak,Kaçın,Teknikler,FALSE, Önsel
+.Net Core,Benimse,Platformlar,FALSE, Kemal
+Single Page Application,Benimse,Platformlar,FALSE, Önsel
+Client Side - MVVM,Benimse,Platformlar,FALSE, Umut
+Azure DevOps (VSTS),Benimse,Platformlar,FALSE, Sevi
+Docker,Benimse,Platformlar,FALSE, Sevi
+PostgreSQL,Benimse,Platformlar,TRUE, Kemal
+Merkezi Loglama İçin Graylog/Elastic/Kibana,Benimse,Platformlar,TRUE, Umut
+Redis,Benimse,Platformlar,FALSE, Önsel
+mongoDB,Benimse,Platformlar,FALSE, Önsel
+MySQL,Deneyimle,Platformlar,TRUE, Kemal
+Github,Deneyimle,Platformlar,FALSE, Umut
+Elastic,Deneyimle,Platformlar,FALSE, Önsel
+Azure,Deneyimle,Platformlar,FALSE, Sevi
+Kubernetes,Deneyimle,Platformlar,FALSE, Sevi
+Testinium,Deneyimle,Platformlar,TRUE, Ali
+Node.js,Deneyimle,Platformlar,FALSE, Önsel
+AWS,Değerlendir,Platformlar,TRUE, Sevi
+Google Cloud,Değerlendir,Platformlar,TRUE, Sevi
+Azure Functions,Değerlendir,Platformlar,TRUE, Önsel
+CockroachDB,Değerlendir,Platformlar,TRUE, Umut
+WebAssembly,Değerlendir,Platformlar,TRUE, Kemal
+Blazor,Değerlendir,Platformlar,TRUE, Kemal
+Selenoid,Değerlendir,Platformlar,TRUE, Ali
+MS SQL Server,Kaçın,Platformlar,FALSE, Kemal
+Web Forms,Kaçın,Platformlar,FALSE, Kemal
+Visual Studio Code,Benimse,Araçlar,FALSE, Umut
+Git,Benimse,Araçlar,FALSE, Ali
+Postman,Benimse,Araçlar,FALSE, Ali
+Kong,Benimse,Araçlar,FALSE, Sevi
+Kibana,Benimse,Araçlar,FALSE, Önsel
+OpenCover,Benimse,Araçlar,FALSE, Ali
+AxoCover,Benimse,Araçlar,TRUE, Ali
+RabbitMQ,Deneyimle,Araçlar,FALSE, Umut
+Yarn,Deneyimle,Araçlar,TRUE, Umut
+Coverlet,Deneyimle,Araçlar,TRUE, Ali
+PowerBI,Deneyimle,Araçlar,TRUE, Sevi
+Sketch ile Prototipleştirme,Değerlendir,Araçlar,TRUE, Umut
+Apache Kafka,Değerlendir,Araçlar,TRUE, Önsel
+Prometheus,Değerlendir,Araçlar,TRUE, Serdar
+C# 7,Benimse,Diller & Kütüphaneler,FALSE, Umut
+TypeScript,Benimse,Diller & Kütüphaneler,FALSE, Umut
+Vue.js,Benimse,Diller & Kütüphaneler,FALSE, Önsel
+Java,Benimse,Diller & Kütüphaneler,FALSE, Sevi
+Entity Framework Core,Benimse,Diller & Kütüphaneler,FALSE, Umut
+IdentityServer,Benimse,Diller & Kütüphaneler,FALSE, Kemal
+xUnit,Benimse,Diller & Kütüphaneler,FALSE, Ali
+Selenium,Benimse,Diller & Kütüphaneler,FALSE, Ali
+BatMap,Benimse,Diller & Kütüphaneler,FALSE, Umut
+GoLang,Deneyimle,Diller & Kütüphaneler,TRUE, Sevi
+React.js,Deneyimle,Diller & Kütüphaneler,TRUE, Önsel
+Pug.js,Deneyimle,Diller & Kütüphaneler,FALSE, Önsel
+Webpack,Deneyimle,Diller & Kütüphaneler,FALSE, Önsel
+Linquest,Deneyimle,Diller & Kütüphaneler,TRUE, Umut
+Spring Cloud,Deneyimle,Diller & Kütüphaneler,FALSE, Sevi
+Dapper,Deneyimle,Diller & Kütüphaneler,FALSE, Kemal
+SCSS,Değerlendir,Diller & Kütüphaneler,TRUE, Önsel
+Angular,Değerlendir,Diller & Kütüphaneler,FALSE, Kemal
+Angular.js,Kaçın,Diller & Kütüphaneler,FALSE, Kemal
+Ember.js,Kaçın,Diller & Kütüphaneler,FALSE, Kemal
+Knockout.js,Kaçın,Diller & Kütüphaneler,FALSE, Kemal
+jQuery,Kaçın,Diller & Kütüphaneler,FALSE, Kemal
+Backbone.js,Kaçın,Diller & Kütüphaneler,FALSE, Kemal
+3. Parti .Net Core IoC Frameworkler,Kaçın,Diller & Kütüphaneler,FALSE, Kemal
