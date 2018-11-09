@@ -452,7 +452,7 @@ const Radar = function (size, radar) {
       .append('div')
       .attr('class', 'footer-content')
       .append('p')
-      .html('<a href="https://github.com/DogusTeknoloji/build-your-own-radar">Project</a> Forked From <a href="https://github.com/thoughtworks/build-your-own-radar">ThoughtWorks Radar</a>');
+      .html('<a href="https://github.com/DogusTeknoloji/build-your-own-radar">Project</a> Forked From <a href="https://github.com/thoughtworks/build-your-own-radar">ThoughtWorks build-your-own-radar</a>');
   }
 
   function mouseoverQuadrant(order) {
