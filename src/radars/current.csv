@@ -65,9 +65,8 @@ Vue.js;Benimse;Diller & Kütüphaneler;FALSE;Single Page Application geliştirme
 Java;Benimse;Diller & Kütüphaneler;FALSE; Sevi
 Entity Framework Core;Benimse;Diller & Kütüphaneler;FALSE; Umut
 IdentityServer;Benimse;Diller & Kütüphaneler;FALSE; OpenID Connect ve OAuth2.0 gibi endusitri standartları üzerine kurulmuş açık kaynak <a href="https://identityserver.io/">IdentityServer</a> kütüphanesinin, "Authentication", "Single Sign-On/Sign-Out" çözümü olarak kullanılmasını tavsiye ediyoruz.
-xUnit;Benimse;Diller & Kütüphaneler;FALSE; Ali
-Selenium;Benimse;Diller & Kütüphaneler;FALSE; Ali
-BatMap;Benimse;Diller & Kütüphaneler;FALSE; Umut
+xUnit;Benimse;Diller & Kütüphaneler;FALSE;xUnit, .NET Framework için geliştirilen community destekli açık kaynak unit test kütüphanesidir. Kendi alanında son teknoloji olarak kabul görmüştür.
+Selenium;Benimse;Diller & Kütüphaneler;FALSE;Selenium, Web tarayıcı ve UI Test Otomasyonları için kullanılan açık kaynak araçlar ve kütüphaneler içerir. C# dahil çok sayıda dili destekleyen endüstride genel kabul görmüş bir teknolojidir.BatMap;Benimse;Diller & Kütüphaneler;FALSE; Umut
 GoLang;Deneyimle;Diller & Kütüphaneler;TRUE; Sevi
 React.js;Deneyimle;Diller & Kütüphaneler;TRUE;Single Page Application geliştirme kütüphaneleri içinde adaptasyon ve geliştirme kolaylığı avantajlarından ötürü kullanılması düşünülebilir.
 Pug.js;Deneyimle;Diller & Kütüphaneler;FALSE;HTML markup yerine daha sade olması ve içinde gelen güçlü mixin geliştirme gibi özelliklerinden ötürü kullanımı düşünülebilir.
