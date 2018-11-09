@@ -468,10 +468,10 @@ const Radar = function (size, radar) {
     });
 
 
-    header.append('div')
-      .classed('print-radar button no-capitalize', true)
-      .text('Yazdır')
-      .on('click', window.print.bind(window));
+    // header.append('div')
+    //   .classed('print-radar button no-capitalize', true)
+    //   .text('Yazdır')
+    //   .on('click', window.print.bind(window));
   }
 
   function plotRadarFooter() {
