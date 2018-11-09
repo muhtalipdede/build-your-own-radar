@@ -1,8 +1,8 @@
 name;ring;quadrant;isNew;description
 Mimari Tasarım Kayıtları (LADR);Benimse;Teknikler;FALSE; Sevi
 Service Design Canvas;Benimse;Teknikler;TRUE; Umut
-Event Storming;Benimse;Teknikler;FALSE;Event Storming, bir domain içinde gerçekleşen süreçlerin tanımlanması için uygulanan workshop tarzında bir aktivitedir. İş uzmanları, geliştiriciler ve analistlerin de bulunabileceği, bilgisayar gerektirmeyen ve iş süreçlerinin kolayca anlaşılabilmesini sağlayan bir modelleme yöntemi olan Event Storming'in tüm projelerde kullanılmasını tavsiye ediyoruz.
-Unit Test Geliştirme;Benimse;Teknikler;FALSE; Ali
+Event Storming;Benimse;Teknikler;FALSE;Event Storming; bir domain içinde gerçekleşen süreçlerin tanımlanması için uygulanan workshop tarzında bir aktivitedir. İş uzmanları, geliştiriciler ve analistlerin de bulunabileceği, bilgisayar gerektirmeyen ve iş süreçlerinin kolayca anlaşılabilmesini sağlayan bir modelleme yöntemi olan Event Storming'in tüm projelerde kullanılmasını tavsiye ediyoruz.
+Unit Test Geliştirme;Benimse;Teknikler;FALSE;Unit Testler metotları ve yazılım bileşenlerini soyutlanmış olarak test etmede kullanılır. Bunlar en alt seviyedeki testlerdir. Yazılımcı için önemi 'Kodlarınız Unit Test yazmayacak kadar değersiz mi?' vurgusuyla dile getirilir.    
 Pair Programming;Benimse;Teknikler;FALSE; Ali
 Code Review;Benimse;Teknikler;FALSE; Ali
 İstemci Taraflı Sorgu;Deneyimle;Teknikler;FALSE; Umut
@@ -71,7 +71,7 @@ BatMap;Benimse;Diller & Kütüphaneler;FALSE; Umut
 GoLang;Deneyimle;Diller & Kütüphaneler;TRUE; Sevi
 React.js;Deneyimle;Diller & Kütüphaneler;TRUE;Single Page Application geliştirme kütüphaneleri içinde adaptasyon ve geliştirme kolaylığı avantajlarından ötürü kullanılması düşünülebilir.
 Pug.js;Deneyimle;Diller & Kütüphaneler;FALSE;HTML markup yerine daha sade olması ve içinde gelen güçlü mixin geliştirme gibi özelliklerinden ötürü kullanımı düşünülebilir.
-Webpack;Deneyimle;Diller & Kütüphaneler;FALSE;Frontend uygulamaları geliştirme sürecinde; özellikle SPA uygulamaların bileşenlerinin konfigüre edilmesi ve paketlenmesi için kullanımı düşünülebilir.
+Webpack;Deneyimle;Diller & Kütüphaneler;FALSE;Frontend uygulamaları geliştirme sürecinde, özellikle SPA uygulamaların bileşenlerinin konfigüre edilmesi ve paketlenmesi için kullanımı düşünülebilir.
 Linquest;Deneyimle;Diller & Kütüphaneler;TRUE; Umut
 Spring Cloud;Deneyimle;Diller & Kütüphaneler;FALSE; Sevi
 Dapper;Deneyimle;Diller & Kütüphaneler;FALSE; Kemal
