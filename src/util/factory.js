@@ -20,13 +20,10 @@ const Sheet = require('./sheet');
 const ExceptionMessages = require('./exceptionMessages');
 
 const plotRadar = function (title, blips) {
-    var date = title == 'current.csv' ? new Date() : new Date(title.substring(0, title.length - 4)),
-        locale = "tr-TR",
-        month = date.toLocaleString(locale, {
-            month: "long"
-        });
+    var date = title == 'current.csv' ? new Date() : new Date(title.substring(0, title.length - 4));
+    var q = Math.ceil((date.getMonth() + 1) / 3);
 
-    document.title = month + ' ' + date.getFullYear() + ' Teknoloji Radarı';
+    document.title = date.getFullYear() + ' Q' + q + ' Teknoloji Radarı';
     d3.selectAll(".loading").remove();
 
     var rings = _.map(_.uniqBy(blips, 'ring'), 'ring');
