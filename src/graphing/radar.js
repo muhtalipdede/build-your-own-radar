@@ -132,7 +132,7 @@ const Radar = function (size, radar) {
     var table = d3.select('.quadrant-table.' + order);
     let h3 = table.append('h3');
     h3.append('span')
-      .attr('class', 'ring-bullet')
+      .attr('class', 'ring-bullet-' + order)
       .text('●');
     h3.append('span').text(ring);
     h3.append('span')

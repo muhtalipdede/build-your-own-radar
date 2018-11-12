@@ -156,8 +156,23 @@ body {
 
 @media screen {
 
-  .ring-bullet {
+  .ring-bullet-first {
+    color: #99c295;
+    padding-right: 4px;
+  }
+
+  .ring-bullet-second{
     color: #1ebccd;
+    padding-right: 4px;
+  }
+
+  .ring-bullet-third {
+    color: #f59c5c;
+    padding-right: 4px;
+  }
+
+  .ring-bullet-fourth {
+    color: #bf4272;
     padding-right: 4px;
   }
 
