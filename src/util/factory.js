@@ -20,7 +20,7 @@ const Sheet = require('./sheet');
 const ExceptionMessages = require('./exceptionMessages');
 
 const plotRadar = function (title, blips) {
-    var date = title == 'current.csv' ? new Date() : new Date(title.substring(0, title.length - 4));
+    var date = title.indexOf('current.csv') >= 0 ? new Date() : new Date(title.substring(0, title.length - 4));
     var q = Math.ceil((date.getMonth() + 1) / 3);
 
     document.title = date.getFullYear() + ' Q' + q + ' Teknoloji Radarı';
@@ -186,7 +186,7 @@ const GoogleSheetInput = function () {
                 sheet.init().build();
             } else {
                 var baseUrl = location.protocol + '//' + location.host + location.pathname;
-                var sheet = CSVDocument(baseUrl + '/radars/current.csv');
+                var sheet = CSVDocument(baseUrl + '/radars/current.csv?$t=new Date().getTime()');
                 sheet.init().build();
             }
         }
