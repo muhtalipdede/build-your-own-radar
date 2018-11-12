@@ -110,7 +110,7 @@ const CSVDocument = function (url) {
     var self = {};
 
     self.build = function () {
-        d3.dsv(';', url).then(createBlips);
+        d3.dsv('|', url).then(createBlips);
     }
 
     var createBlips = function (data) {
