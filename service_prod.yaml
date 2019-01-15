@@ -12,7 +12,7 @@ spec:
   # an external load-balanced IP for the frontend service.
   # type: LoadBalancer
   type: ExternalName
-  externalName: kube.qmatic.fw.dteknoloji.com.tr
+  externalName: radar.dtmimari
   ports:
   - port: 80
   selector:
