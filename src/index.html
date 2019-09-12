@@ -16,25 +16,49 @@
   </script>
 
   <script type="text/javascript">
-    function openURL() {
-      var url = window.location.href;
-      if (msieversion()) {
-        var shell = new ActiveXObject("WScript.Shell");
-        shell.run("Chrome " + url);
-        window.open('', '_self', '');
-        window.close();
-      }
-    }
+ function openURL()
+  {
+  
+	var url = getParameterByName("redirectUrl");
+	
+	if(!url)
+		return;
+		
+	if(msieversion())
+	{
+      var shell = new ActiveXObject("WScript.Shell");
+      shell.run("Chrome " + url);
+	  window.open('', '_self', '');
+	  window.close();
+	}
+	else
+	{
+		window.location.href = url;
+	}
+  }
+  
+  function msieversion() {
 
-    function msieversion() {
-      var ua = window.navigator.userAgent;
-      var msie = ua.indexOf("MSIE ");
-      if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer, return version number
-      {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+    {
         return true;
-      }
-      return false;
     }
+    
+	return false;
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
   </script>
 
   <meta charset="utf-8">
