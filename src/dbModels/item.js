@@ -1,11 +1,11 @@
-import * as mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const ItemSchema = new mongoose.Schema({
   name: String,
   ring: String,
   quadrant: String,
-  isNew: Boolean,
+  // isNew: Boolean,
   description: String,
 });
 
-export default mongoose.model('item', ItemSchema);
+module.exports = mongoose.model('item', ItemSchema);

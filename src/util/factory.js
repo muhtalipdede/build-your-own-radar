@@ -110,6 +110,7 @@ const MongoDb = function (dbUrl, collectionName) {
     var self = {};
 
     self.build = function () {
+        debugger;
         new Mongo(dbUrl);
         itemModel.default.find({}).then(createBlips);
 
