@@ -1,5 +1,6 @@
 const d3 = require('d3');
 const Tabletop = require('tabletop');
+const config = require('../config');
 const _ = {
     map: require('lodash/map'),
     uniqBy: require('lodash/uniqBy'),
@@ -17,6 +18,8 @@ const MalformedDataError = require('../exceptions/malformedDataError');
 const SheetNotFoundError = require('../exceptions/sheetNotFoundError');
 const ContentValidator = require('./contentValidator');
 const Sheet = require('./sheet');
+const Mongo = require('./mongo');
+const itemModel = require('../dbModels/item');
 const ExceptionMessages = require('./exceptionMessages');
 
 const plotRadar = function (title, blips) {
@@ -92,6 +95,43 @@ const GoogleSheet = function (sheetReference, sheetName) {
             } catch (exception) {
                 plotErrorMessage(exception);
             }
+        }
+    };
+
+    self.init = function () {
+        plotLoading();
+        return self;
+    };
+
+    return self;
+};
+
+const MongoDb = function (dbUrl, collectionName) {
+    var self = {};
+
+    self.build = function () {
+        new Mongo(dbUrl);
+        itemModel.default.find({}).then(createBlips);
+
+        function createBlips(items) {
+            console.log(items);
+            // try {
+            //     if (!sheetName) {
+            //         sheetName = tabletop.foundSheetNames[0];
+            //     }
+            //     var columnNames = tabletop.sheets(sheetName).columnNames;
+
+            //     var contentValidator = new ContentValidator(columnNames);
+            //     contentValidator.verifyContent();
+            //     contentValidator.verifyHeaders();
+
+            //     var all = tabletop.sheets(sheetName).all();
+            //     var blips = _.map(all, new InputSanitizer().sanitize);
+
+            //     plotRadar(tabletop.googleSheetName, blips);
+            // } catch (exception) {
+            //     plotErrorMessage(exception);
+            // }
         }
     };
 
@@ -185,9 +225,13 @@ const GoogleSheetInput = function () {
 
                 sheet.init().build();
             } else {
-                var baseUrl = location.protocol + '//' + location.host + location.pathname;
-                var sheet = CSVDocument(baseUrl + '/radars/current.csv?$t=new Date().getTime()');
-                sheet.init().build();
+                var dbUrl = config.DB_URL;
+                var collectionName = "items";
+                var db = MongoDb(dbUrl, collectionName);
+                db.init().build();
+                // var baseUrl = location.protocol + '//' + location.host + location.pathname;
+                // var sheet = CSVDocument(baseUrl + '/radars/current.csv?$t=new Date().getTime()');
+                // sheet.init().build();
             }
         }
     };
