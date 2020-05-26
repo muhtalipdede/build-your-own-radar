@@ -1,6 +1,5 @@
 const d3 = require('d3');
 const Tabletop = require('tabletop');
-const config = require('../config');
 const _ = {
     map: require('lodash/map'),
     uniqBy: require('lodash/uniqBy'),
@@ -18,11 +17,11 @@ const MalformedDataError = require('../exceptions/malformedDataError');
 const SheetNotFoundError = require('../exceptions/sheetNotFoundError');
 const ContentValidator = require('./contentValidator');
 const Sheet = require('./sheet');
-const Mongo = require('./mongo');
-const itemModel = require('../dbModels/item');
+const Api = require('./api');
+const config = require('../config');
 const ExceptionMessages = require('./exceptionMessages');
 
-const plotRadar = function (title, blips) {
+const plotRadar = function(title, blips) {
     var date = title.indexOf('current.csv') >= 0 ? new Date() : new Date(title.substring(0, title.length - 4));
     var q = Math.ceil((date.getMonth() + 1) / 3);
 
@@ -33,7 +32,7 @@ const plotRadar = function (title, blips) {
     var ringMap = {};
     var maxRings = 4;
 
-    _.each(rings, function (ringName, i) {
+    _.each(rings, function(ringName, i) {
         if (i == maxRings) {
             throw new MalformedDataError(ExceptionMessages.TOO_MANY_RINGS);
         }
@@ -41,7 +40,7 @@ const plotRadar = function (title, blips) {
     });
 
     var quadrants = {};
-    _.each(blips, function (blip) {
+    _.each(blips, function(blip) {
         if (!quadrants[blip.quadrant]) {
             quadrants[blip.quadrant] = new Quadrant(_.capitalize(blip.quadrant));
         }
@@ -49,7 +48,7 @@ const plotRadar = function (title, blips) {
     });
 
     var radar = new Radar();
-    _.each(quadrants, function (quadrant) {
+    _.each(quadrants, function(quadrant) {
         radar.addQuadrant(quadrant)
     });
 
@@ -58,12 +57,12 @@ const plotRadar = function (title, blips) {
     new GraphingRadar(size, radar).init().plot();
 }
 
-const GoogleSheet = function (sheetReference, sheetName) {
+const GoogleSheet = function(sheetReference, sheetName) {
     var self = {};
 
-    self.build = function () {
+    self.build = function() {
         var sheet = new Sheet(sheetReference);
-        sheet.exists(function (notFound) {
+        sheet.exists(function(notFound) {
             if (notFound) {
                 plotErrorMessage(notFound);
                 return;
@@ -98,7 +97,7 @@ const GoogleSheet = function (sheetReference, sheetName) {
         }
     };
 
-    self.init = function () {
+    self.init = function() {
         plotLoading();
         return self;
     };
@@ -106,52 +105,15 @@ const GoogleSheet = function (sheetReference, sheetName) {
     return self;
 };
 
-const MongoDb = function (dbUrl, collectionName) {
+const CSVDocument = function(url) {
     var self = {};
 
-    self.build = function () {
-        debugger;
-        new Mongo(dbUrl);
-        itemModel.default.find({}).then(createBlips);
+    self.build = function() {
 
-        function createBlips(items) {
-            console.log(items);
-            // try {
-            //     if (!sheetName) {
-            //         sheetName = tabletop.foundSheetNames[0];
-            //     }
-            //     var columnNames = tabletop.sheets(sheetName).columnNames;
-
-            //     var contentValidator = new ContentValidator(columnNames);
-            //     contentValidator.verifyContent();
-            //     contentValidator.verifyHeaders();
-
-            //     var all = tabletop.sheets(sheetName).all();
-            //     var blips = _.map(all, new InputSanitizer().sanitize);
-
-            //     plotRadar(tabletop.googleSheetName, blips);
-            // } catch (exception) {
-            //     plotErrorMessage(exception);
-            // }
-        }
-    };
-
-    self.init = function () {
-        plotLoading();
-        return self;
-    };
-
-    return self;
-};
-
-const CSVDocument = function (url) {
-    var self = {};
-
-    self.build = function () {
         d3.dsv('|', url).then(createBlips);
     }
 
-    var createBlips = function (data) {
+    var createBlips = function(data) {
         try {
             var columnNames = ['name', 'ring', 'quadrant', 'isNew', 'description'];
             var contentValidator = new ContentValidator(columnNames);
@@ -164,7 +126,7 @@ const CSVDocument = function (url) {
         }
     }
 
-    self.init = function () {
+    self.init = function() {
         plotLoading();
         return self;
     };
@@ -172,8 +134,36 @@ const CSVDocument = function (url) {
     return self;
 };
 
-const QueryParams = function (queryString) {
-    var decode = function (s) {
+const ApiCall = function(url) {
+    var self = {};
+
+    self.build = function() {
+        Api(url).init().then(createBlips);
+    }
+
+    var createBlips = function(data) {
+        try {
+            var columnNames = ['name', 'ring', 'quadrant', 'isNew', 'description'];
+            var contentValidator = new ContentValidator(columnNames);
+            contentValidator.verifyContent();
+            contentValidator.verifyHeaders();
+            var blips = _.map(data, new InputSanitizer().sanitize);
+            plotRadar(FileName(url), blips);
+        } catch (exception) {
+            plotErrorMessage(exception);
+        }
+    }
+
+    self.init = function() {
+        plotLoading();
+        return self;
+    };
+
+    return self;
+};
+
+const QueryParams = function(queryString) {
+    var decode = function(s) {
         return decodeURIComponent(s.replace(/\+/g, " "));
     };
 
@@ -187,14 +177,14 @@ const QueryParams = function (queryString) {
     return queryParams
 };
 
-const DomainName = function (url) {
+const DomainName = function(url) {
     var search = /.+:\/\/([^\/]+)/;
     var match = search.exec(decodeURIComponent(url.replace(/\+/g, " ")));
     return match == null ? null : match[1];
 }
 
 
-const FileName = function (url) {
+const FileName = function(url) {
     var search = /([^\/]+)$/;
     var match = search.exec(decodeURIComponent(url.replace(/\+/g, " ")));
     if (match != null) {
@@ -204,10 +194,10 @@ const FileName = function (url) {
     return url;
 }
 
-const GoogleSheetInput = function () {
+const GoogleSheetInput = function() {
     var self = {};
 
-    self.build = function () {
+    self.build = function() {
         var search = window.location.search.substring(1);
         var domainName = DomainName(search);
         var queryParams = QueryParams(search);
@@ -226,10 +216,8 @@ const GoogleSheetInput = function () {
 
                 sheet.init().build();
             } else {
-                var dbUrl = config.DB_URL;
-                var collectionName = "items";
-                var db = MongoDb(dbUrl, collectionName);
-                db.init().build();
+                var api = ApiCall(config.API_URL);
+                api.init().build();
                 // var baseUrl = location.protocol + '//' + location.host + location.pathname;
                 // var sheet = CSVDocument(baseUrl + '/radars/current.csv?$t=new Date().getTime()');
                 // sheet.init().build();
