@@ -7,7 +7,7 @@ const Api = function(apiUrl) {
     var self = {};
 
     self.init = function(callback) {
-        var feedURL = config.API_URL + "/items";
+        var feedURL = config.API_URL + "/radarItems";
         return axios.get(feedURL).then(r => r.data);
     };
 
