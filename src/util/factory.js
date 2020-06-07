@@ -22,7 +22,8 @@ const config = require('../config');
 const ExceptionMessages = require('./exceptionMessages');
 
 const plotRadar = function(title, blips) {
-    var date = title.indexOf('current.csv') >= 0 ? new Date() : new Date(title.substring(0, title.length - 4));
+    // var date = title.indexOf('current.csv') >= 0 ? new Date() : new Date(title.substring(0, title.length - 4));
+    let date = new Date();
     var q = Math.ceil((date.getMonth() + 1) / 3);
 
     document.title = date.getFullYear() + ' Q' + q + ' Teknoloji Radarı';
