@@ -91,7 +91,7 @@ module.exports = {
     devServer: {
         contentBase: buildPath,
         host: '0.0.0.0',
-        port: 8080
+        port: process.env.PORT || 8080
     }
 };
 
