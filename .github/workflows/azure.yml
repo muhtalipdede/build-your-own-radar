@@ -36,12 +36,12 @@ jobs:
         npm install
         npm run build --if-present
         npm run test --if-present
-    - name: Start App
-      run: |
-        npm run dev
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+    - name: Start App
+      run: |
+        npm run dev
