@@ -6,7 +6,7 @@
     "scripts": {
         "test": "istanbul cover jasmine",
         "dev": "webpack-dev-server --dev --inline",
-        "prod": "webpack --prod --config webpack.config.js",
+        "prod": "webpack --prod --profile --progress --config=webpack.config.js --env=production",
         "build": "webpack --prod"
     },
     "author": "Doğuş Teknoloji",
