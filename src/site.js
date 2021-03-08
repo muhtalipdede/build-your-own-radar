@@ -1,5 +1,5 @@
 require('./common');
-require('./images/logo.png');
+require('./images/dt-logo.png');
 
 const GoogleSheetInput = require('./util/factory');
 

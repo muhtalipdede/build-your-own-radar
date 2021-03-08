@@ -442,7 +442,7 @@ const Radar = function (size, radar) {
     header.select('.radar-title')
       .append('div')
       .attr('class', 'radar-title__logo')
-      .html('<a href="https://www.d-teknoloji.com.tr"> <img src="/images/logo.png" /> </a>');
+      .html('<a href="https://www.d-teknoloji.com.tr"> <img src="/images/dt-logo.png" /> </a>');
 
     return header;
   }
